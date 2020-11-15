@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4560F3B-82E9-4608-8EE7-829337B1D33E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Haccp_MES</RootNamespace>
+    <AssemblyName>Haccp_MES</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.11.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.11.4\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.1.11\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.1.11\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\Zstandard.Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1_information\info_1-1_accountmng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1_information\info_1-1_accountmng.Designer.cs">
+      <DependentUpon>info_1-1_accountmng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1_information\info_1-2_inputacnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1_information\info_1-2_inputacnt.Designer.cs">
+      <DependentUpon>info_1-2_inputacnt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1_information\info_2-2_inputitem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1_information\info_2-2_inputitem.Designer.cs">
+      <DependentUpon>info_2-2_inputitem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1_information\info_2-1_itemMng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1_information\info_2-1_itemMng.Designer.cs">
+      <DependentUpon>info_2-1_itemMng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1_information\info_3-1_WareHouseMng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1_information\info_3-1_WareHouseMng.Designer.cs">
+      <DependentUpon>info_3-1_WareHouseMng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1_information\info_3-2_inputware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1_information\info_3-2_inputware.Designer.cs">
+      <DependentUpon>info_3-2_inputware.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_management\mngmnt_1-1_insertData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_management\mngmnt_1-1_insertData.Designer.cs">
+      <DependentUpon>mngmnt_1-1_insertData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_management\mngmnt_1-2_materialList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_management\mngmnt_1-2_materialList.Designer.cs">
+      <DependentUpon>mngmnt_1-2_materialList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_management\mngmnt_2_outputProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_management\mngmnt_2_outputProduct.Designer.cs">
+      <DependentUpon>mngmnt_2_outputProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_management\mngmnt_1_inputProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_management\mngmnt_1_inputProduct.Designer.cs">
+      <DependentUpon>mngmnt_1_inputProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_management\mngmnt_3_StockState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_management\mngmnt_3_StockState.Designer.cs">
+      <DependentUpon>mngmnt_3_StockState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_management\mngmnt_4_RealStockTaking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_management\mngmnt_4_RealStockTaking.Designer.cs">
+      <DependentUpon>mngmnt_4_RealStockTaking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3_production\Prod_1_WorkOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_production\Prod_1_WorkOrders.Designer.cs">
+      <DependentUpon>Prod_1_WorkOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3_production\Prod_2_PerformanceMng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_production\Prod_2_PerformanceMng.Designer.cs">
+      <DependentUpon>Prod_2_PerformanceMng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3_production\Prod_3_Production_Trend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_production\Prod_3_Production_Trend.Designer.cs">
+      <DependentUpon>Prod_3_Production_Trend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseInfo.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Splash_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash_Form.Designer.cs">
+      <DependentUpon>Splash_Form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="1_information\info_1-1_accountmng.resx">
+      <DependentUpon>info_1-1_accountmng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1_information\info_1-2_inputacnt.resx">
+      <DependentUpon>info_1-2_inputacnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1_information\info_2-2_inputitem.resx">
+      <DependentUpon>info_2-2_inputitem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1_information\info_2-1_itemMng.resx">
+      <DependentUpon>info_2-1_itemMng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1_information\info_3-1_WareHouseMng.resx">
+      <DependentUpon>info_3-1_WareHouseMng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1_information\info_3-2_inputware.resx">
+      <DependentUpon>info_3-2_inputware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_management\mngmnt_1-1_insertData.resx">
+      <DependentUpon>mngmnt_1-1_insertData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_management\mngmnt_1-2_materialList.resx">
+      <DependentUpon>mngmnt_1-2_materialList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_management\mngmnt_2_outputProduct.resx">
+      <DependentUpon>mngmnt_2_outputProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_management\mngmnt_1_inputProduct.resx">
+      <DependentUpon>mngmnt_1_inputProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_management\mngmnt_3_StockState.resx">
+      <DependentUpon>mngmnt_3_StockState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_management\mngmnt_4_RealStockTaking.resx">
+      <DependentUpon>mngmnt_4_RealStockTaking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3_production\Prod_1_WorkOrders.resx">
+      <DependentUpon>Prod_1_WorkOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3_production\Prod_2_PerformanceMng.resx">
+      <DependentUpon>Prod_2_PerformanceMng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3_production\Prod_3_Production_Trend.resx">
+      <DependentUpon>Prod_3_Production_Trend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Splash_Form.resx">
+      <DependentUpon>Splash_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="png\loop-circular-3x.png" />
+    <None Include="png\magnifying-glass-4x.png" />
+    <Content Include="png\miniLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="png\browser-4x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="png\list-2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="png\aperture-3x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="png\list-3x.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
