@@ -16,7 +16,7 @@ namespace Haccp_MES
         {
             InitializeComponent();
         }
-
+        //문혁 테스트
         private void Home_Load(object sender, EventArgs e)
         {
             #region 차트1 테스용
