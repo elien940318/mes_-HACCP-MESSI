@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Haccp_MES._2_management
 {
     public partial class mngmnt_1_2_materialList : Form
