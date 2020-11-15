@@ -200,7 +200,6 @@ namespace Haccp_MES._2_management
 
             foreach (var item in tblLayOutPnlBody.Controls)
             {
-
                 if (item is Label)
                 {
                     if (((Label)item).FlatStyle == FlatStyle.Standard)
