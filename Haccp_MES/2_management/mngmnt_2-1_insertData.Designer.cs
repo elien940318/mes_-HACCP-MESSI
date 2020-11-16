@@ -43,8 +43,8 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_input_count = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_input_inspec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_ware_no = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.col_com_no = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.col_input_admin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_input_etc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -145,8 +145,8 @@
             this.Column3,
             this.Column4,
             this.col_input_count,
-            this.col_input_inspec,
             this.col_ware_no,
+            this.col_com_no,
             this.col_input_admin,
             this.col_input_etc});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -206,15 +206,9 @@
             // 
             // col_input_count
             // 
-            this.col_input_count.DataPropertyName = "input_count";
+            this.col_input_count.DataPropertyName = "output_count";
             this.col_input_count.HeaderText = "수량";
             this.col_input_count.Name = "col_input_count";
-            // 
-            // col_input_inspec
-            // 
-            this.col_input_inspec.DataPropertyName = "input_inspec";
-            this.col_input_inspec.HeaderText = "검사방법";
-            this.col_input_inspec.Name = "col_input_inspec";
             // 
             // col_ware_no
             // 
@@ -222,9 +216,15 @@
             this.col_ware_no.HeaderText = "창고명";
             this.col_ware_no.Name = "col_ware_no";
             // 
+            // col_com_no
+            // 
+            this.col_com_no.DataPropertyName = "com_name";
+            this.col_com_no.HeaderText = "거래처명";
+            this.col_com_no.Name = "col_com_no";
+            // 
             // col_input_admin
             // 
-            this.col_input_admin.DataPropertyName = "input_admin";
+            this.col_input_admin.DataPropertyName = "output_admin";
             this.col_input_admin.HeaderText = "관리자";
             this.col_input_admin.Name = "col_input_admin";
             this.col_input_admin.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -232,7 +232,7 @@
             // 
             // col_input_etc
             // 
-            this.col_input_etc.DataPropertyName = "input_etc";
+            this.col_input_etc.DataPropertyName = "output_etc";
             this.col_input_etc.HeaderText = "비고";
             this.col_input_etc.Name = "col_input_etc";
             this.col_input_etc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -276,8 +276,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_input_count;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_input_inspec;
         private System.Windows.Forms.DataGridViewComboBoxColumn col_ware_no;
+        private System.Windows.Forms.DataGridViewComboBoxColumn col_com_no;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_input_admin;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_input_etc;
     }

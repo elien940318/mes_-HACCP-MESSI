@@ -121,8 +121,10 @@ namespace Haccp_MES._2_management
                 {
                     conn.Open();
                     string InsertQuery =
-                        "INSERT INTO manage_input(input_date, mat_no, input_count, input_admin, input_inspec, ware_no, input_etc) " +
-                        "VALUES (NOW(), @MAT_NO, @INPUT_COUNT, @INPUT_ADMIN, @INPUT_INSPEC, @WARE_NO, @INPUT_ETC);" +
+                        // 원자재입고 log 추가부분
+                        "INSERT INTO manage_input(input_date, mat_no, input_count, input_admin, input_inspec, ware_no, input_etc, com_no) " +
+                        "VALUES (NOW(), @MAT_NO, @INPUT_COUNT, @INPUT_ADMIN, @INPUT_INSPEC, @WARE_NO, @INPUT_ETC, @COM_NO);" +
+                        // 수량 증가 부분
                         "INSERT INTO manage_curmat VALUES(@WARE_NO, @MAT_NO, @INPUT_COUNT) ON DUPLICATE KEY UPDATE curmat_count = curmat_count + @INPUT_COUNT;";
                     cmd = new MySqlCommand(InsertQuery, conn);
                     
@@ -131,6 +133,7 @@ namespace Haccp_MES._2_management
                     cmd.Parameters.AddWithValue("@INPUT_ADMIN",     Convert.ToString(dtRow["input_admin"]));
                     cmd.Parameters.AddWithValue("@INPUT_INSPEC",    Convert.ToString(dtRow["input_inspec"]));
                     cmd.Parameters.AddWithValue("@WARE_NO",         dictWarehouse[Convert.ToString(dtRow["ware_name"])]);
+                    cmd.Parameters.AddWithValue("@COM_NO",          dictCompany[Convert.ToString(dtRow["com_name"])]);
                     cmd.Parameters.AddWithValue("@INPUT_ETC",       Convert.ToString(dtRow["input_etc"]));
 
                     if (cmd.ExecuteNonQuery() == 0)

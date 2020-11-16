@@ -21,7 +21,7 @@ namespace Haccp_MES
         {
             Thread tr = new Thread(new ThreadStart(show_SplashForm));
             tr.Start();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             InitializeComponent();
             tr.Abort();
             CustomizeDesign();

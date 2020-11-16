@@ -33,13 +33,30 @@ namespace Haccp_MES._2_management
             dtHead.Clear();
             string orderInfoHeadQuery = "SELECT output_idx, DATE_FORMAT(output_date, '%Y-%m-%d') as 'output_date', com_name, mat_name,  mat_price * output_count as 'output_totprc', output_admin " +
                 "FROM manage_output, info_material, info_warehouse, info_company " +
-                "WHERE manage_output.mat_no = info_material.mat_no AND manage_output.ware_no = info_warehouse.ware_no AND info_company.com_no = info_material.com_no " + 
-                "AND output_date BETWEEN @DATETIME1 AND @DATETIME2 " +
-                "ORDER BY output_idx;";
+                "WHERE manage_output.mat_no = info_material.mat_no AND manage_output.ware_no = info_warehouse.ware_no AND info_company.com_no = manage_output.com_no " +
+                "AND output_date BETWEEN @DATETIME1 AND @DATETIME2 ";
+
+            // 만약에 회사명을 입력했다면, Text값이 "" 이 아니니까 AND문으로 쿼리문에 추가
+            // 입력하지 않았다면 Text값이 ""이므로 추가하지 않음.
+            if (txtComName.Text != "")
+            {
+                orderInfoHeadQuery += "AND com_name = @COM_NAME ";
+            }
+            // 이하동문
+            if (txtMatName.Text != "")
+            {
+                orderInfoHeadQuery += "AND mat_name = @MAT_NAME ";
+            }
+            // 마지막으로 정렬문을 추가하고, 쿼리문 끝내는 ";" 추가해준다.
+            orderInfoHeadQuery += "ORDER BY output_idx; ";
+
             cmd = new MySqlCommand(orderInfoHeadQuery, conn);
 
             cmd.Parameters.AddWithValue("@DATETIME1", dtPicker1.Value.Date.ToString("yyyy-MM-dd"));
             cmd.Parameters.AddWithValue("@DATETIME2", dtPicker2.Value.AddDays(1).ToString("yyyy-MM-dd"));
+            cmd.Parameters.AddWithValue("@COM_NAME", txtComName.Text.ToString());   // 회사명을 매개값으로 추가해준다.
+            cmd.Parameters.AddWithValue("@MAT_NAME", txtMatName.Text.ToString());   // 제품명을 매개값으로 추가해준다.
+
             adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dtHead);
 
@@ -51,12 +68,12 @@ namespace Haccp_MES._2_management
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            //mngmnt_2_1_insertData dlg = new mngmnt_2_1_insertData();
+            mngmnt_2_1_insertData dlg = new mngmnt_2_1_insertData();
 
-            //if (dlg.ShowDialog() == DialogResult.OK)
-            //{
-            //    btnSelect_Click(sender, e);
-            //}
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                btnSelect_Click(sender, e);
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
