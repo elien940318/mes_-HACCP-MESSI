@@ -19,7 +19,6 @@ namespace Haccp_MES._1_information
         public info_2_2_inputitem()
         {
             InitializeComponent();
-            gridInsertProductInput.Rows.Add();
             conn = new MySqlConnection(DatabaseInfo.DBConnectStr());
         }
 
@@ -57,9 +56,14 @@ namespace Haccp_MES._1_information
                 cmd = new MySqlCommand(input_query, conn);
                 cmd.ExecuteNonQuery();
             }
-            MessageBox.Show("저장완료,");
+            MessageBox.Show("저장완료");
             gridInsertProductInput.Rows.Clear();
             conn.Close();
+        }
+
+        private void btnAddRow_Click(object sender, EventArgs e)
+        {
+            gridInsertProductInput.Rows.Add();
         }
     }
 }
