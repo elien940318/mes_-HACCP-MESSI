@@ -423,11 +423,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.label5.Location = new System.Drawing.Point(80, 40);
             this.label5.Name = "label5";
-<<<<<<< HEAD
             this.label5.Size = new System.Drawing.Size(218, 46);
-=======
-            this.label5.Size = new System.Drawing.Size(187, 37);
->>>>>>> 167e4ded7546eb11dac95483bea6a8178566923f
             this.label5.TabIndex = 117;
             this.label5.Text = "품목 재고 현황";
             // 
