@@ -58,7 +58,7 @@ namespace Haccp_MES._1_information
                 cmd = new MySqlCommand(input_query, conn);
                 cmd.ExecuteNonQuery();
             }
-            MessageBox.Show("저장완료,");
+            MessageBox.Show("저장완료");
             gridInsertMangeInput.Rows.Clear();
             conn.Close();
 
