@@ -21,7 +21,7 @@ namespace Haccp_MES
         {
             Thread tr = new Thread(new ThreadStart(show_SplashForm));
             tr.Start();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             InitializeComponent();
             tr.Abort();
             CustomizeDesign();
@@ -359,19 +359,19 @@ namespace Haccp_MES
 
         }
 
-        // 공정관리 버튼
+        // BOM관리 버튼
         private void btn_ProcessMng_Click(object sender, EventArgs e)
         {
             btnColorChange_StdInfo(btn_ProcessMng);
-            tabBtnActiveOn(tabProcess);
 
             if (tabProcess.Visible == true)  // 상단 탭버튼이 보인다는건 이미 창이 열려있다는 말
             {
-                BringToScreen(tabProcess, "info_4_ProcessMng"); // 새로 만들지 말고 맨앞으로
+                BringToScreen(tabProcess, "info_4_1_BOMMng"); // 새로 만들지 말고 맨앞으로
             }
             else
             {
                 tabBtnActiveOn(tabProcess);
+                OpenChildForm(new info_4_1_BOMMng());
             }
 
         }

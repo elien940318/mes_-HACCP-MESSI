@@ -35,18 +35,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnLoadMaterialList = new System.Windows.Forms.Button();
+            this.btnAddRow = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.gridInsertManageInput = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_input_count = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_input_inspec = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridInsertProductInput = new System.Windows.Forms.DataGridView();
+            this.mat_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mat_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mat_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mat_spec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mat_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mat_etc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridInsertManageInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridInsertProductInput)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -92,18 +91,20 @@
             this.btnSave.TabIndex = 98;
             this.btnSave.Text = "저장";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnLoadMaterialList
+            // btnAddRow
             // 
-            this.btnLoadMaterialList.BackColor = System.Drawing.Color.Violet;
-            this.btnLoadMaterialList.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnLoadMaterialList.Location = new System.Drawing.Point(743, 50);
-            this.btnLoadMaterialList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnLoadMaterialList.Name = "btnLoadMaterialList";
-            this.btnLoadMaterialList.Size = new System.Drawing.Size(159, 29);
-            this.btnLoadMaterialList.TabIndex = 99;
-            this.btnLoadMaterialList.Text = "품목정보 불러오기";
-            this.btnLoadMaterialList.UseVisualStyleBackColor = false;
+            this.btnAddRow.BackColor = System.Drawing.Color.Violet;
+            this.btnAddRow.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnAddRow.Location = new System.Drawing.Point(870, 49);
+            this.btnAddRow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAddRow.Name = "btnAddRow";
+            this.btnAddRow.Size = new System.Drawing.Size(33, 29);
+            this.btnAddRow.TabIndex = 99;
+            this.btnAddRow.Text = "+";
+            this.btnAddRow.UseVisualStyleBackColor = false;
+            this.btnAddRow.Click += new System.EventHandler(this.btnAddRow_Click);
             // 
             // btnDelete
             // 
@@ -116,21 +117,22 @@
             this.btnDelete.TabIndex = 102;
             this.btnDelete.Text = "-";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // gridInsertManageInput
+            // gridInsertProductInput
             // 
-            this.gridInsertManageInput.AllowUserToAddRows = false;
-            this.gridInsertManageInput.AllowUserToDeleteRows = false;
-            this.gridInsertManageInput.AllowUserToResizeColumns = false;
-            this.gridInsertManageInput.AllowUserToResizeRows = false;
-            this.gridInsertManageInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gridInsertProductInput.AllowUserToAddRows = false;
+            this.gridInsertProductInput.AllowUserToDeleteRows = false;
+            this.gridInsertProductInput.AllowUserToResizeColumns = false;
+            this.gridInsertProductInput.AllowUserToResizeRows = false;
+            this.gridInsertProductInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridInsertManageInput.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridInsertManageInput.BackgroundColor = System.Drawing.Color.Silver;
-            this.gridInsertManageInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridInsertManageInput.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.gridInsertManageInput.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.gridInsertProductInput.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridInsertProductInput.BackgroundColor = System.Drawing.Color.Silver;
+            this.gridInsertProductInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridInsertProductInput.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.gridInsertProductInput.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -138,16 +140,15 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridInsertManageInput.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridInsertManageInput.ColumnHeadersHeight = 29;
-            this.gridInsertManageInput.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
-            this.Column4,
-            this.Column3,
-            this.col_input_count,
-            this.Column1,
-            this.col_input_inspec,
-            this.Column5});
+            this.gridInsertProductInput.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridInsertProductInput.ColumnHeadersHeight = 29;
+            this.gridInsertProductInput.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.mat_no,
+            this.mat_name,
+            this.mat_type,
+            this.mat_spec,
+            this.mat_price,
+            this.mat_etc});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -155,13 +156,13 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Khaki;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridInsertManageInput.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gridInsertManageInput.EnableHeadersVisualStyles = false;
-            this.gridInsertManageInput.Location = new System.Drawing.Point(39, 102);
-            this.gridInsertManageInput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridInsertManageInput.MultiSelect = false;
-            this.gridInsertManageInput.Name = "gridInsertManageInput";
-            this.gridInsertManageInput.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.gridInsertProductInput.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gridInsertProductInput.EnableHeadersVisualStyles = false;
+            this.gridInsertProductInput.Location = new System.Drawing.Point(39, 102);
+            this.gridInsertProductInput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridInsertProductInput.MultiSelect = false;
+            this.gridInsertProductInput.Name = "gridInsertProductInput";
+            this.gridInsertProductInput.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -169,72 +170,65 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridInsertManageInput.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.gridInsertManageInput.RowHeadersVisible = false;
-            this.gridInsertManageInput.RowHeadersWidth = 51;
-            this.gridInsertManageInput.RowTemplate.Height = 23;
-            this.gridInsertManageInput.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridInsertManageInput.Size = new System.Drawing.Size(903, 226);
-            this.gridInsertManageInput.TabIndex = 103;
+            this.gridInsertProductInput.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.gridInsertProductInput.RowHeadersVisible = false;
+            this.gridInsertProductInput.RowHeadersWidth = 51;
+            this.gridInsertProductInput.RowTemplate.Height = 23;
+            this.gridInsertProductInput.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridInsertProductInput.Size = new System.Drawing.Size(903, 226);
+            this.gridInsertProductInput.TabIndex = 103;
             // 
-            // Column2
+            // mat_no
             // 
-            this.Column2.DataPropertyName = "mat_name";
-            this.Column2.HeaderText = "품목코드";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.mat_no.DataPropertyName = "mat_no";
+            this.mat_no.HeaderText = "품목코드";
+            this.mat_no.MinimumWidth = 6;
+            this.mat_no.Name = "mat_no";
+            this.mat_no.ReadOnly = true;
             // 
-            // Column4
+            // mat_name
             // 
-            this.Column4.DataPropertyName = "mat_price";
-            this.Column4.HeaderText = "품목명";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.mat_name.DataPropertyName = "mat_name";
+            this.mat_name.HeaderText = "품목명";
+            this.mat_name.MinimumWidth = 6;
+            this.mat_name.Name = "mat_name";
             // 
-            // Column3
+            // mat_type
             // 
-            this.Column3.DataPropertyName = "mat_type";
-            this.Column3.HeaderText = "품목유형";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.mat_type.DataPropertyName = "mat_type";
+            this.mat_type.HeaderText = "품목유형";
+            this.mat_type.MinimumWidth = 6;
+            this.mat_type.Name = "mat_type";
             // 
-            // col_input_count
+            // mat_spec
             // 
-            this.col_input_count.DataPropertyName = "input_count";
-            this.col_input_count.HeaderText = "규격";
-            this.col_input_count.MinimumWidth = 6;
-            this.col_input_count.Name = "col_input_count";
+            this.mat_spec.DataPropertyName = "mat_spec";
+            this.mat_spec.HeaderText = "규격";
+            this.mat_spec.MinimumWidth = 6;
+            this.mat_spec.Name = "mat_spec";
             // 
-            // Column1
+            // mat_price
             // 
-            this.Column1.HeaderText = "가격";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
+            this.mat_price.DataPropertyName = "mat_price";
+            this.mat_price.HeaderText = "가격";
+            this.mat_price.MinimumWidth = 6;
+            this.mat_price.Name = "mat_price";
             // 
-            // col_input_inspec
+            // mat_etc
             // 
-            this.col_input_inspec.DataPropertyName = "input_inspec";
-            this.col_input_inspec.HeaderText = "거래처코드";
-            this.col_input_inspec.MinimumWidth = 6;
-            this.col_input_inspec.Name = "col_input_inspec";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "비고란";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
+            this.mat_etc.DataPropertyName = "mat_etc";
+            this.mat_etc.HeaderText = "비고란";
+            this.mat_etc.MinimumWidth = 6;
+            this.mat_etc.Name = "mat_etc";
             // 
             // info_2_2_inputitem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 399);
-            this.Controls.Add(this.gridInsertManageInput);
+            this.Controls.Add(this.gridInsertProductInput);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnLoadMaterialList);
+            this.Controls.Add(this.btnAddRow);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
@@ -244,8 +238,9 @@
             this.Name = "info_2_2_inputitem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "  ";
+            this.Load += new System.EventHandler(this.info_2_2_inputitem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridInsertManageInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridInsertProductInput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,15 +252,14 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnLoadMaterialList;
+        private System.Windows.Forms.Button btnAddRow;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.DataGridView gridInsertManageInput;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_input_count;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_input_inspec;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridView gridInsertProductInput;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mat_no;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mat_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mat_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mat_spec;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mat_price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mat_etc;
     }
 }
