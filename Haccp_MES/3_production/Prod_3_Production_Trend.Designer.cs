@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnDelete = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtMatName = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -45,37 +43,14 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnInsert = new System.Windows.Forms.Button();
             this.btnSelect = new System.Windows.Forms.Button();
-            this.lblHeadCount = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.gridManageInputHead = new System.Windows.Forms.DataGridView();
-            this.colCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.input_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridManageInputHead)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Red;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDelete.ForeColor = System.Drawing.Color.Transparent;
-            this.btnDelete.Location = new System.Drawing.Point(993, 36);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(48, 29);
-            this.btnDelete.TabIndex = 117;
-            this.btnDelete.Text = "삭제";
-            this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // groupBox1
             // 
@@ -201,26 +176,13 @@
             this.label5.TabIndex = 113;
             this.label5.Text = "기간별생산현황";
             // 
-            // btnInsert
-            // 
-            this.btnInsert.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnInsert.ForeColor = System.Drawing.Color.Transparent;
-            this.btnInsert.Location = new System.Drawing.Point(945, 36);
-            this.btnInsert.Margin = new System.Windows.Forms.Padding(0);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(48, 29);
-            this.btnInsert.TabIndex = 112;
-            this.btnInsert.Text = "신규";
-            this.btnInsert.UseVisualStyleBackColor = false;
-            // 
             // btnSelect
             // 
             this.btnSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSelect.ForeColor = System.Drawing.Color.Transparent;
             this.btnSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelect.Location = new System.Drawing.Point(898, 36);
+            this.btnSelect.Location = new System.Drawing.Point(990, 36);
             this.btnSelect.Margin = new System.Windows.Forms.Padding(0);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(47, 29);
@@ -228,28 +190,7 @@
             this.btnSelect.Text = "조회";
             this.btnSelect.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSelect.UseVisualStyleBackColor = false;
-            // 
-            // lblHeadCount
-            // 
-            this.lblHeadCount.AutoSize = true;
-            this.lblHeadCount.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblHeadCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.lblHeadCount.Location = new System.Drawing.Point(986, 449);
-            this.lblHeadCount.Name = "lblHeadCount";
-            this.lblHeadCount.Size = new System.Drawing.Size(18, 20);
-            this.lblHeadCount.TabIndex = 110;
-            this.lblHeadCount.Text = "n";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label3.Location = new System.Drawing.Point(914, 449);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 20);
-            this.label3.TabIndex = 109;
-            this.label3.Text = "(총건수 :         )";
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // label1
             // 
@@ -258,158 +199,38 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.label1.Location = new System.Drawing.Point(55, 166);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 29);
+            this.label1.Size = new System.Drawing.Size(153, 29);
             this.label1.TabIndex = 108;
-            this.label1.Text = "입고내역";
+            this.label1.Text = "기간별 생산현황";
             // 
-            // gridManageInputHead
+            // chart1
             // 
-            this.gridManageInputHead.AllowUserToAddRows = false;
-            this.gridManageInputHead.AllowUserToDeleteRows = false;
-            this.gridManageInputHead.AllowUserToResizeColumns = false;
-            this.gridManageInputHead.AllowUserToResizeRows = false;
-            this.gridManageInputHead.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridManageInputHead.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridManageInputHead.BackgroundColor = System.Drawing.Color.Silver;
-            this.gridManageInputHead.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridManageInputHead.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.gridManageInputHead.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridManageInputHead.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.gridManageInputHead.ColumnHeadersHeight = 29;
-            this.gridManageInputHead.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colCheck,
-            this.Column2,
-            this.input_date,
-            this.Column13,
-            this.Column3,
-            this.Column15,
-            this.Column1});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridManageInputHead.DefaultCellStyle = dataGridViewCellStyle11;
-            this.gridManageInputHead.EnableHeadersVisualStyles = false;
-            this.gridManageInputHead.Location = new System.Drawing.Point(29, 200);
-            this.gridManageInputHead.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridManageInputHead.MultiSelect = false;
-            this.gridManageInputHead.Name = "gridManageInputHead";
-            this.gridManageInputHead.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridManageInputHead.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.gridManageInputHead.RowHeadersVisible = false;
-            this.gridManageInputHead.RowHeadersWidth = 51;
-            this.gridManageInputHead.RowTemplate.Height = 23;
-            this.gridManageInputHead.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridManageInputHead.Size = new System.Drawing.Size(993, 245);
-            this.gridManageInputHead.TabIndex = 107;
-            // 
-            // colCheck
-            // 
-            this.colCheck.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colCheck.DataPropertyName = "chkbox";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle10.NullValue = false;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.colCheck.DefaultCellStyle = dataGridViewCellStyle10;
-            this.colCheck.FalseValue = "false";
-            this.colCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.colCheck.Frozen = true;
-            this.colCheck.HeaderText = "";
-            this.colCheck.MinimumWidth = 6;
-            this.colCheck.Name = "colCheck";
-            this.colCheck.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colCheck.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colCheck.TrueValue = "true";
-            this.colCheck.Width = 89;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "input_idx";
-            this.Column2.HeaderText = "입고번호";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // input_date
-            // 
-            this.input_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.input_date.DataPropertyName = "input_date";
-            this.input_date.HeaderText = "입고일자";
-            this.input_date.MinimumWidth = 6;
-            this.input_date.Name = "input_date";
-            this.input_date.ReadOnly = true;
-            this.input_date.Width = 88;
-            // 
-            // Column13
-            // 
-            this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column13.DataPropertyName = "com_name";
-            this.Column13.HeaderText = "거래처";
-            this.Column13.MinimumWidth = 6;
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            this.Column13.Width = 89;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "mat_name";
-            this.Column3.HeaderText = "품목명";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column15
-            // 
-            this.Column15.DataPropertyName = "input_totprc";
-            this.Column15.HeaderText = "총액";
-            this.Column15.MinimumWidth = 6;
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "input_admin";
-            this.Column1.HeaderText = "관리자";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(28, 217);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(1008, 290);
+            this.chart1.TabIndex = 106;
+            this.chart1.Text = "chart1";
             // 
             // Prod_3_Production_Trend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1085, 714);
-            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.btnSelect);
-            this.Controls.Add(this.lblHeadCount);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.gridManageInputHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximumSize = new System.Drawing.Size(1085, 714);
@@ -419,15 +240,13 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridManageInputHead)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtMatName;
         private System.Windows.Forms.Label label19;
@@ -440,18 +259,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button btnSelect;
-        private System.Windows.Forms.Label lblHeadCount;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView gridManageInputHead;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn colCheck;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn input_date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

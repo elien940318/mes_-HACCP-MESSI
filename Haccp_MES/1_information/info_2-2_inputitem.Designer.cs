@@ -104,6 +104,7 @@
             this.btnAddRow.TabIndex = 99;
             this.btnAddRow.Text = "+";
             this.btnAddRow.UseVisualStyleBackColor = false;
+            this.btnAddRow.Click += new System.EventHandler(this.btnAddRow_Click);
             // 
             // btnDelete
             // 
