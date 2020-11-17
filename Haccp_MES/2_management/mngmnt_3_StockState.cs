@@ -188,13 +188,6 @@ namespace Haccp_MES._2_management
                     "AND manage_curmat.ware_no = @WARE_ID " +
                     "AND manage_curmat.mat_no = @MAT_ID;";
            
-            cmd = new MySqlCommand(StockBodyQuery, conn);
-
-            cmd.Parameters.AddWithValue("@WARE_ID", ware_id);
-            cmd.Parameters.AddWithValue("@MAT_ID", mat_id);
-
-            adapter = new MySqlDataAdapter(cmd);
-            adapter.Fill(dtBody);
 
             int i = 0;
 
@@ -209,6 +202,13 @@ namespace Haccp_MES._2_management
                     }
                 }
             }
+            cmd = new MySqlCommand(StockBodyQuery, conn);
+
+            cmd.Parameters.AddWithValue("@WARE_ID", ware_id);
+            cmd.Parameters.AddWithValue("@MAT_ID", mat_id);
+
+            adapter = new MySqlDataAdapter(cmd);
+            adapter.Fill(dtBody);
 
 
             conn.Close();

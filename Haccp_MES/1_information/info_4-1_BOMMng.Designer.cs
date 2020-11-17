@@ -32,35 +32,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSelect = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.tblLyoutPnl = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_mat_no = new System.Windows.Forms.Label();
-            this.txtmat_name = new System.Windows.Forms.TextBox();
-            this.txtmat_type = new System.Windows.Forms.TextBox();
-            this.txtmat_spec = new System.Windows.Forms.TextBox();
-            this.txt_matprice = new System.Windows.Forms.TextBox();
-            this.txtmat_etc = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbMatNo = new System.Windows.Forms.ComboBox();
-            this.cbMatType = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtMatName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnSerch = new System.Windows.Forms.Button();
             this.lblHeadCount = new System.Windows.Forms.Label();
@@ -68,17 +56,22 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gridManageInputHead = new System.Windows.Forms.DataGridView();
             this.colCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.bom_parent_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mat_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mat_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bom_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bom_count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mat_etc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblLyoutPnl.SuspendLayout();
+            this.gridBOMinfo = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.bom_finish_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mat_finished_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mat_material_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bom_count = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridManageInputHead)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridBOMinfo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSelect
@@ -96,6 +89,7 @@
             this.btnSelect.TabIndex = 148;
             this.btnSelect.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // label9
             // 
@@ -104,187 +98,14 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.label9.Location = new System.Drawing.Point(59, 179);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(109, 29);
+            this.label9.Size = new System.Drawing.Size(115, 29);
             this.label9.TabIndex = 147;
-            this.label9.Text = "BOM정보";
-            // 
-            // tblLyoutPnl
-            // 
-            this.tblLyoutPnl.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tblLyoutPnl.ColumnCount = 4;
-            this.tblLyoutPnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.94317F));
-            this.tblLyoutPnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.88635F));
-            this.tblLyoutPnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.94317F));
-            this.tblLyoutPnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.22731F));
-            this.tblLyoutPnl.Controls.Add(this.lbl_mat_no, 1, 0);
-            this.tblLyoutPnl.Controls.Add(this.txtmat_name, 1, 1);
-            this.tblLyoutPnl.Controls.Add(this.txtmat_type, 1, 2);
-            this.tblLyoutPnl.Controls.Add(this.txtmat_spec, 3, 0);
-            this.tblLyoutPnl.Controls.Add(this.txt_matprice, 3, 1);
-            this.tblLyoutPnl.Controls.Add(this.txtmat_etc, 3, 2);
-            this.tblLyoutPnl.Controls.Add(this.label14, 2, 2);
-            this.tblLyoutPnl.Controls.Add(this.label17, 0, 1);
-            this.tblLyoutPnl.Controls.Add(this.label20, 0, 0);
-            this.tblLyoutPnl.Controls.Add(this.label21, 2, 0);
-            this.tblLyoutPnl.Controls.Add(this.label22, 0, 2);
-            this.tblLyoutPnl.Controls.Add(this.label25, 2, 1);
-            this.tblLyoutPnl.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tblLyoutPnl.Location = new System.Drawing.Point(30, 547);
-            this.tblLyoutPnl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tblLyoutPnl.Name = "tblLyoutPnl";
-            this.tblLyoutPnl.RowCount = 3;
-            this.tblLyoutPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tblLyoutPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tblLyoutPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tblLyoutPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblLyoutPnl.Size = new System.Drawing.Size(1011, 145);
-            this.tblLyoutPnl.TabIndex = 146;
-            // 
-            // lbl_mat_no
-            // 
-            this.lbl_mat_no.AutoSize = true;
-            this.lbl_mat_no.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_mat_no.Location = new System.Drawing.Point(165, 1);
-            this.lbl_mat_no.Name = "lbl_mat_no";
-            this.lbl_mat_no.Size = new System.Drawing.Size(314, 47);
-            this.lbl_mat_no.TabIndex = 121;
-            this.lbl_mat_no.Text = " ";
-            this.lbl_mat_no.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtmat_name
-            // 
-            this.txtmat_name.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtmat_name.Location = new System.Drawing.Point(165, 59);
-            this.txtmat_name.Name = "txtmat_name";
-            this.txtmat_name.Size = new System.Drawing.Size(314, 27);
-            this.txtmat_name.TabIndex = 122;
-            // 
-            // txtmat_type
-            // 
-            this.txtmat_type.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtmat_type.Location = new System.Drawing.Point(165, 107);
-            this.txtmat_type.Name = "txtmat_type";
-            this.txtmat_type.Size = new System.Drawing.Size(314, 27);
-            this.txtmat_type.TabIndex = 125;
-            // 
-            // txtmat_spec
-            // 
-            this.txtmat_spec.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtmat_spec.Location = new System.Drawing.Point(647, 11);
-            this.txtmat_spec.Name = "txtmat_spec";
-            this.txtmat_spec.Size = new System.Drawing.Size(360, 27);
-            this.txtmat_spec.TabIndex = 123;
-            // 
-            // txt_matprice
-            // 
-            this.txt_matprice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_matprice.Location = new System.Drawing.Point(647, 59);
-            this.txt_matprice.Name = "txt_matprice";
-            this.txt_matprice.Size = new System.Drawing.Size(360, 27);
-            this.txt_matprice.TabIndex = 124;
-            // 
-            // txtmat_etc
-            // 
-            this.txtmat_etc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtmat_etc.Location = new System.Drawing.Point(647, 107);
-            this.txtmat_etc.Name = "txtmat_etc";
-            this.txtmat_etc.Size = new System.Drawing.Size(360, 27);
-            this.txtmat_etc.TabIndex = 126;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Silver;
-            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label14.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label14.Location = new System.Drawing.Point(483, 97);
-            this.label14.Margin = new System.Windows.Forms.Padding(0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(160, 47);
-            this.label14.TabIndex = 111;
-            this.label14.Text = "비고란";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Silver;
-            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label17.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label17.Location = new System.Drawing.Point(1, 49);
-            this.label17.Margin = new System.Windows.Forms.Padding(0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(160, 47);
-            this.label17.TabIndex = 110;
-            this.label17.Text = "품목명";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Silver;
-            this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label20.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label20.Location = new System.Drawing.Point(1, 1);
-            this.label20.Margin = new System.Windows.Forms.Padding(0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(160, 47);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "품목코드";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Silver;
-            this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label21.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label21.Location = new System.Drawing.Point(483, 1);
-            this.label21.Margin = new System.Windows.Forms.Padding(0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(160, 47);
-            this.label21.TabIndex = 1;
-            this.label21.Text = "규격";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Silver;
-            this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label22.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label22.Location = new System.Drawing.Point(1, 97);
-            this.label22.Margin = new System.Windows.Forms.Padding(0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(160, 47);
-            this.label22.TabIndex = 111;
-            this.label22.Text = "품목유형";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Silver;
-            this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label25.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label25.Location = new System.Drawing.Point(483, 49);
-            this.label25.Margin = new System.Windows.Forms.Padding(0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(160, 47);
-            this.label25.TabIndex = 113;
-            this.label25.Text = "가격";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label9.Text = "완제품 정보";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Haccp_MES.Properties.Resources.list_2x;
-            this.pictureBox3.Location = new System.Drawing.Point(30, 517);
+            this.pictureBox3.Location = new System.Drawing.Point(30, 473);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(16, 16);
@@ -297,7 +118,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label2.Location = new System.Drawing.Point(55, 512);
+            this.label2.Location = new System.Drawing.Point(55, 468);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 29);
             this.label2.TabIndex = 144;
@@ -319,16 +140,14 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cbMatNo);
-            this.groupBox1.Controls.Add(this.cbMatType);
-            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtMatName);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Location = new System.Drawing.Point(249, 86);
+            this.groupBox1.Location = new System.Drawing.Point(482, 86);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(793, 83);
+            this.groupBox1.Size = new System.Drawing.Size(560, 83);
             this.groupBox1.TabIndex = 142;
             this.groupBox1.TabStop = false;
             // 
@@ -343,27 +162,6 @@
             this.cbMatNo.Name = "cbMatNo";
             this.cbMatNo.Size = new System.Drawing.Size(128, 23);
             this.cbMatNo.TabIndex = 113;
-            // 
-            // cbMatType
-            // 
-            this.cbMatType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbMatType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbMatType.FormattingEnabled = true;
-            this.cbMatType.Items.AddRange(new object[] {
-            ""});
-            this.cbMatType.Location = new System.Drawing.Point(620, 33);
-            this.cbMatType.Name = "cbMatType";
-            this.cbMatType.Size = new System.Drawing.Size(129, 23);
-            this.cbMatType.TabIndex = 112;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(547, 37);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 15);
-            this.label7.TabIndex = 107;
-            this.label7.Text = "품목유형";
             // 
             // txtMatName
             // 
@@ -424,19 +222,6 @@
             this.label5.TabIndex = 139;
             this.label5.Text = "BOM 관리";
             // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.Transparent;
-            this.btnUpdate.Location = new System.Drawing.Point(963, 514);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(0);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(78, 29);
-            this.btnUpdate.TabIndex = 138;
-            this.btnUpdate.Text = "수정";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
             // btnInsert
             // 
             this.btnInsert.BackColor = System.Drawing.Color.DodgerBlue;
@@ -449,6 +234,7 @@
             this.btnInsert.TabIndex = 137;
             this.btnInsert.Text = "신규";
             this.btnInsert.UseVisualStyleBackColor = false;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnSerch
             // 
@@ -464,27 +250,30 @@
             this.btnSerch.Text = "조회";
             this.btnSerch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSerch.UseVisualStyleBackColor = false;
+            this.btnSerch.Click += new System.EventHandler(this.btnSerch_Click);
             // 
             // lblHeadCount
             // 
             this.lblHeadCount.AutoSize = true;
             this.lblHeadCount.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblHeadCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.lblHeadCount.Location = new System.Drawing.Point(986, 471);
+            this.lblHeadCount.Location = new System.Drawing.Point(995, 418);
             this.lblHeadCount.Name = "lblHeadCount";
             this.lblHeadCount.Size = new System.Drawing.Size(0, 20);
             this.lblHeadCount.TabIndex = 135;
+            this.lblHeadCount.Visible = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label3.Location = new System.Drawing.Point(914, 471);
+            this.label3.Location = new System.Drawing.Point(923, 418);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 20);
             this.label3.TabIndex = 134;
             this.label3.Text = "(총건수 :         )";
+            this.label3.Visible = false;
             // 
             // label1
             // 
@@ -522,10 +311,8 @@
             this.gridManageInputHead.ColumnHeadersHeight = 29;
             this.gridManageInputHead.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCheck,
-            this.bom_parent_no,
+            this.mat_no,
             this.mat_name,
-            this.bom_no,
-            this.bom_count,
             this.mat_etc});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray;
@@ -553,8 +340,9 @@
             this.gridManageInputHead.RowHeadersWidth = 51;
             this.gridManageInputHead.RowTemplate.Height = 23;
             this.gridManageInputHead.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridManageInputHead.Size = new System.Drawing.Size(1013, 255);
+            this.gridManageInputHead.Size = new System.Drawing.Size(1013, 190);
             this.gridManageInputHead.TabIndex = 132;
+            this.gridManageInputHead.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridManageInputHead_CellContentClick);
             // 
             // colCheck
             // 
@@ -576,13 +364,13 @@
             this.colCheck.TrueValue = "true";
             this.colCheck.Width = 89;
             // 
-            // bom_parent_no
+            // mat_no
             // 
-            this.bom_parent_no.DataPropertyName = "bom_parent_no";
-            this.bom_parent_no.HeaderText = "품목코드";
-            this.bom_parent_no.MinimumWidth = 6;
-            this.bom_parent_no.Name = "bom_parent_no";
-            this.bom_parent_no.ReadOnly = true;
+            this.mat_no.DataPropertyName = "mat_no";
+            this.mat_no.HeaderText = "품목코드";
+            this.mat_no.MinimumWidth = 6;
+            this.mat_no.Name = "mat_no";
+            this.mat_no.ReadOnly = true;
             // 
             // mat_name
             // 
@@ -594,24 +382,6 @@
             this.mat_name.ReadOnly = true;
             this.mat_name.Width = 88;
             // 
-            // bom_no
-            // 
-            this.bom_no.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.bom_no.DataPropertyName = "bom_no";
-            this.bom_no.HeaderText = "재료코드";
-            this.bom_no.MinimumWidth = 6;
-            this.bom_no.Name = "bom_no";
-            this.bom_no.ReadOnly = true;
-            this.bom_no.Width = 89;
-            // 
-            // bom_count
-            // 
-            this.bom_count.DataPropertyName = "bom_count";
-            this.bom_count.HeaderText = "수량";
-            this.bom_count.MinimumWidth = 6;
-            this.bom_count.Name = "bom_count";
-            this.bom_count.ReadOnly = true;
-            // 
             // mat_etc
             // 
             this.mat_etc.DataPropertyName = "mat_etc";
@@ -619,14 +389,129 @@
             this.mat_etc.MinimumWidth = 6;
             this.mat_etc.Name = "mat_etc";
             // 
+            // gridBOMinfo
+            // 
+            this.gridBOMinfo.AllowUserToAddRows = false;
+            this.gridBOMinfo.AllowUserToDeleteRows = false;
+            this.gridBOMinfo.AllowUserToResizeColumns = false;
+            this.gridBOMinfo.AllowUserToResizeRows = false;
+            this.gridBOMinfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridBOMinfo.BackgroundColor = System.Drawing.Color.Silver;
+            this.gridBOMinfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridBOMinfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.gridBOMinfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridBOMinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.gridBOMinfo.ColumnHeadersHeight = 29;
+            this.gridBOMinfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewCheckBoxColumn1,
+            this.bom_finish_no,
+            this.mat_finished_name,
+            this.mat_material_name,
+            this.bom_count,
+            this.dataGridViewTextBoxColumn3});
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridBOMinfo.DefaultCellStyle = dataGridViewCellStyle7;
+            this.gridBOMinfo.EnableHeadersVisualStyles = false;
+            this.gridBOMinfo.Location = new System.Drawing.Point(28, 502);
+            this.gridBOMinfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridBOMinfo.MultiSelect = false;
+            this.gridBOMinfo.Name = "gridBOMinfo";
+            this.gridBOMinfo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridBOMinfo.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.gridBOMinfo.RowHeadersVisible = false;
+            this.gridBOMinfo.RowHeadersWidth = 51;
+            this.gridBOMinfo.RowTemplate.Height = 23;
+            this.gridBOMinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridBOMinfo.Size = new System.Drawing.Size(1011, 185);
+            this.gridBOMinfo.TabIndex = 149;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "chkbox";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle6.NullValue = false;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.dataGridViewCheckBoxColumn1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewCheckBoxColumn1.FalseValue = "false";
+            this.dataGridViewCheckBoxColumn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dataGridViewCheckBoxColumn1.Frozen = true;
+            this.dataGridViewCheckBoxColumn1.HeaderText = "";
+            this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCheckBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewCheckBoxColumn1.TrueValue = "true";
+            this.dataGridViewCheckBoxColumn1.Width = 89;
+            // 
+            // bom_finish_no
+            // 
+            this.bom_finish_no.DataPropertyName = "bom_finish_no";
+            this.bom_finish_no.HeaderText = "품목코드";
+            this.bom_finish_no.MinimumWidth = 6;
+            this.bom_finish_no.Name = "bom_finish_no";
+            this.bom_finish_no.ReadOnly = true;
+            // 
+            // mat_finished_name
+            // 
+            this.mat_finished_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.mat_finished_name.DataPropertyName = "mat_finished_name";
+            this.mat_finished_name.HeaderText = "품목명";
+            this.mat_finished_name.MinimumWidth = 6;
+            this.mat_finished_name.Name = "mat_finished_name";
+            this.mat_finished_name.ReadOnly = true;
+            this.mat_finished_name.Width = 88;
+            // 
+            // mat_material_name
+            // 
+            this.mat_material_name.DataPropertyName = "mat_material_name";
+            this.mat_material_name.HeaderText = "부재료명";
+            this.mat_material_name.MinimumWidth = 6;
+            this.mat_material_name.Name = "mat_material_name";
+            // 
+            // bom_count
+            // 
+            this.bom_count.DataPropertyName = "bom_count";
+            this.bom_count.HeaderText = "수량";
+            this.bom_count.MinimumWidth = 6;
+            this.bom_count.Name = "bom_count";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "mat_etc";
+            this.dataGridViewTextBoxColumn3.HeaderText = "비고란";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
             // info_4_1_BOMMng
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1085, 714);
+            this.Controls.Add(this.gridBOMinfo);
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.tblLyoutPnl);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnDelete);
@@ -634,7 +519,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.btnSerch);
             this.Controls.Add(this.lblHeadCount);
@@ -644,14 +528,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "info_4_1_BOMMng";
             this.Text = "info_4_1_BOMMng";
-            this.tblLyoutPnl.ResumeLayout(false);
-            this.tblLyoutPnl.PerformLayout();
+            this.Load += new System.EventHandler(this.info_4_1_BOMMng_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridManageInputHead)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridBOMinfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -661,33 +545,17 @@
 
         private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TableLayoutPanel tblLyoutPnl;
-        private System.Windows.Forms.Label lbl_mat_no;
-        private System.Windows.Forms.TextBox txtmat_name;
-        private System.Windows.Forms.TextBox txtmat_type;
-        private System.Windows.Forms.TextBox txtmat_spec;
-        private System.Windows.Forms.TextBox txt_matprice;
-        private System.Windows.Forms.TextBox txtmat_etc;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cbMatNo;
-        private System.Windows.Forms.ComboBox cbMatType;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtMatName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button btnSerch;
         private System.Windows.Forms.Label lblHeadCount;
@@ -695,10 +563,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView gridManageInputHead;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colCheck;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bom_parent_no;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mat_no;
         private System.Windows.Forms.DataGridViewTextBoxColumn mat_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bom_no;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bom_count;
         private System.Windows.Forms.DataGridViewTextBoxColumn mat_etc;
+        private System.Windows.Forms.DataGridView gridBOMinfo;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bom_finish_no;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mat_finished_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mat_material_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bom_count;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }

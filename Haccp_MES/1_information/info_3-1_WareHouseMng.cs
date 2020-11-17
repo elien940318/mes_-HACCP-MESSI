@@ -38,8 +38,8 @@ namespace Haccp_MES._1_information
 
                 while (myreader.Read())
                 {
-                    string mno = myreader.GetString("ware_no");
-                    cbWareNo.Items.Add(mno);
+                    string wno = myreader.GetString("ware_no");
+                    cbWareNo.Items.Add(wno);
                 }
             }
             catch (Exception ex)
@@ -61,8 +61,8 @@ namespace Haccp_MES._1_information
 
                 while (myreader.Read())
                 {
-                    string mtype = myreader.GetString("ware_type");
-                    cbWareType.Items.Add(mtype);
+                    string wtype = myreader.GetString("ware_type");
+                    cbWareType.Items.Add(wtype);
                 }
             }
             catch (Exception ex)
@@ -112,8 +112,8 @@ namespace Haccp_MES._1_information
         {
             conn.Open();
             dtHead.Clear();
-            string warehouseInfoHeadQuery = "SELECT * FROM info_warehouse WHERE ware_name LIKE '%" + txtWareName.Text +
-                                          "%' OR ware_type LIKE '" + cbWareType.SelectedItem + "' OR ware_no LIKE '" +
+            string warehouseInfoHeadQuery = "SELECT * FROM info_warehouse WHERE ware_name LIKE '" + txtWareName.Text +
+                                          "' OR ware_type LIKE '" + cbWareType.SelectedItem + "' OR ware_no LIKE '" +
                                           cbWareNo.SelectedItem + "' OR ware_use LIKE '" + cbWareUse.Text +"';";
 
             cmd = new MySqlCommand(warehouseInfoHeadQuery, conn);

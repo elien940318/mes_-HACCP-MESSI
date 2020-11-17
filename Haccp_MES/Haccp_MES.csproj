@@ -136,6 +136,12 @@
     <Compile Include="1_information\info_4-1_BOMMng.Designer.cs">
       <DependentUpon>info_4-1_BOMMng.cs</DependentUpon>
     </Compile>
+    <Compile Include="1_information\info_4-2_inputBOM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1_information\info_4-2_inputBOM.Designer.cs">
+      <DependentUpon>info_4-2_inputBOM.cs</DependentUpon>
+    </Compile>
     <Compile Include="2_management\mngmnt_1-1_insertData.cs">
       <SubType>Form</SubType>
     </Compile>
