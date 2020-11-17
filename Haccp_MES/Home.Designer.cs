@@ -71,7 +71,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartProductionRate = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,7 +87,7 @@
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartProductionRate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -454,23 +454,24 @@
             this.chart2.TabIndex = 13;
             this.chart2.Text = "chart2";
             // 
-            // chart3
+            // chartProductionRate
             // 
-            this.chart3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.chartProductionRate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             chartArea3.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea3);
+            this.chartProductionRate.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
-            this.chart3.Legends.Add(legend3);
-            this.chart3.Location = new System.Drawing.Point(686, 336);
-            this.chart3.Name = "chart3";
+            this.chartProductionRate.Legends.Add(legend3);
+            this.chartProductionRate.Location = new System.Drawing.Point(686, 336);
+            this.chartProductionRate.Name = "chartProductionRate";
             series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             series3.Legend = "Legend1";
+            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
             series3.Name = "Series1";
-            this.chart3.Series.Add(series3);
-            this.chart3.Size = new System.Drawing.Size(262, 204);
-            this.chart3.TabIndex = 14;
-            this.chart3.Text = "chart3";
+            this.chartProductionRate.Series.Add(series3);
+            this.chartProductionRate.Size = new System.Drawing.Size(262, 204);
+            this.chartProductionRate.TabIndex = 14;
+            this.chartProductionRate.Text = "생산률";
             // 
             // chart4
             // 
@@ -499,7 +500,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(965, 610);
             this.Controls.Add(this.chart4);
-            this.Controls.Add(this.chart3);
+            this.Controls.Add(this.chartProductionRate);
             this.Controls.Add(this.chart2);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.panel8);
@@ -536,7 +537,7 @@
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartProductionRate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
             this.ResumeLayout(false);
 
@@ -574,7 +575,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartProductionRate;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
     }
 }
