@@ -50,15 +50,15 @@ namespace Haccp_MES._1_information
             conn.Open();
             for (int i = 0; i < gridInsertProductInput.Rows.Count; i++)
             {
-
-                string input_query = "INSERT INTO info_material (mat_name, mat_type, mat_spec, mat_price, mat_etc) VALUES ('" + gridInsertProductInput.Rows[i].Cells["mat_name"].Value + "','" + gridInsertProductInput.Rows[i].Cells["mat_type"].Value + "','"
-                                    + gridInsertProductInput.Rows[i].Cells["mat_spec"].Value + "','" + gridInsertProductInput.Rows[i].Cells["mat_price"].Value + "','" + gridInsertProductInput.Rows[i].Cells["mat_etc"].Value + "');";
-                cmd = new MySqlCommand(input_query, conn);
-                cmd.ExecuteNonQuery();
+                    string input_query = "INSERT INTO info_material (mat_name, mat_type, mat_spec, mat_price, mat_etc) VALUES ('" + gridInsertProductInput.Rows[i].Cells["mat_name"].Value + "','" + gridInsertProductInput.Rows[i].Cells["mat_type"].Value + "','"
+                                        + gridInsertProductInput.Rows[i].Cells["mat_spec"].Value + "','" + gridInsertProductInput.Rows[i].Cells["mat_price"].Value + "','" + gridInsertProductInput.Rows[i].Cells["mat_etc"].Value + "');";
+                    cmd = new MySqlCommand(input_query, conn);
+                    cmd.ExecuteNonQuery();
             }
             MessageBox.Show("저장완료");
             gridInsertProductInput.Rows.Clear();
             conn.Close();
+            
         }
 
         private void btnAddRow_Click(object sender, EventArgs e)

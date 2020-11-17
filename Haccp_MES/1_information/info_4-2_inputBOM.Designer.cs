@@ -44,7 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtBomCount = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.index1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bom_parent_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bom_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bom_count = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,7 +76,7 @@
             this.gridSelectBOM.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridSelectBOM.ColumnHeadersHeight = 29;
             this.gridSelectBOM.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
+            this.index1,
             this.bom_parent_no,
             this.bom_no,
             this.bom_count});
@@ -231,11 +231,11 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // Column1
+            // index1
             // 
-            this.Column1.HeaderText = "";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
+            this.index1.HeaderText = "";
+            this.index1.MinimumWidth = 6;
+            this.index1.Name = "index1";
             // 
             // bom_parent_no
             // 
@@ -304,7 +304,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBomCount;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn index1;
         private System.Windows.Forms.DataGridViewTextBoxColumn bom_parent_no;
         private System.Windows.Forms.DataGridViewTextBoxColumn bom_no;
         private System.Windows.Forms.DataGridViewTextBoxColumn bom_count;
