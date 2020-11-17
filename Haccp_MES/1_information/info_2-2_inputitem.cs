@@ -47,18 +47,64 @@ namespace Haccp_MES._1_information
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            bool shit = true;
             conn.Open();
             for (int i = 0; i < gridInsertProductInput.Rows.Count; i++)
             {
-                    string input_query = "INSERT INTO info_material (mat_name, mat_type, mat_spec, mat_price, mat_etc) VALUES ('" + gridInsertProductInput.Rows[i].Cells["mat_name"].Value + "','" + gridInsertProductInput.Rows[i].Cells["mat_type"].Value + "','"
-                                        + gridInsertProductInput.Rows[i].Cells["mat_spec"].Value + "','" + gridInsertProductInput.Rows[i].Cells["mat_price"].Value + "','" + gridInsertProductInput.Rows[i].Cells["mat_etc"].Value + "');";
+
+                if (gridInsertProductInput.Rows[i].Cells["mat_name"].Value != null && gridInsertProductInput.Rows[i].Cells["mat_type"].Value != null)
+                {
+                    string input_query = "INSERT INTO info_material (mat_name, mat_type, mat_spec, mat_price, mat_etc) VALUES (@MAT_NAME, @MAT_TYPE, @MAT_SPEC, @MAT_PRICE, @MAT_ETC);";
+
                     cmd = new MySqlCommand(input_query, conn);
+
+                    cmd.Parameters.AddWithValue("@MAT_NAME", gridInsertProductInput.Rows[i].Cells["mat_name"].Value.ToString());
+                    cmd.Parameters.AddWithValue("@MAT_TYPE", gridInsertProductInput.Rows[i].Cells["mat_type"].Value.ToString());
+
+                    if (gridInsertProductInput.Rows[i].Cells["mat_spec"].Value != null)
+                    {
+                        cmd.Parameters.AddWithValue("@MAT_SPEC", gridInsertProductInput.Rows[i].Cells["mat_spec"].Value.ToString());
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@MAT_SPEC", "");
+                    }
+
+                    if (gridInsertProductInput.Rows[i].Cells["mat_price"].Value != null)
+                    {
+                        cmd.Parameters.AddWithValue("@MAT_PRICE", Convert.ToInt32(gridInsertProductInput.Rows[i].Cells["mat_price"].Value));
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@MAT_PRICE", "0");
+                    }
+
+                    if (gridInsertProductInput.Rows[i].Cells["mat_etc"].Value != null)
+                    {
+                        cmd.Parameters.AddWithValue("@MAT_ETC", gridInsertProductInput.Rows[i].Cells["mat_etc"].Value.ToString());
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@MAT_ETC", "");
+                    }
+
                     cmd.ExecuteNonQuery();
+                }
+                else
+                {
+                    MessageBox.Show("값을 입력해주세요!");
+                    shit = false;
+                    break;
+                }
             }
-            MessageBox.Show("저장완료");
+            if (shit)
+            {
+                MessageBox.Show("저장완료");
+            }
             gridInsertProductInput.Rows.Clear();
             conn.Close();
-            
+
+
         }
 
         private void btnAddRow_Click(object sender, EventArgs e)
