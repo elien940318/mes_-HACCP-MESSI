@@ -19,8 +19,7 @@ BEGIN
     --
     INSERT INTO manage_curmat(ware_no, mat_no, curmat_count) 
     VALUES(NEW.ware_no, NEW.mat_no, NEW.mngodr_count)
-    ON DUPLICATE KEY UPDATE curmat_count = curmat_count + NEW.mngodr_count;
-    
+    ON DUPLICATE KEY UPDATE curmat_count = curmat_count + NEW.mngodr_count;    
 END
 
 

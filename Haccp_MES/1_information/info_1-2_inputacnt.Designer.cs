@@ -38,8 +38,6 @@
             this.btnAddRow = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.gridInsertMangeInput = new System.Windows.Forms.DataGridView();
-            this.Column5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.com_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.com_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.com_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.com_licenseno = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,10 +50,10 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCancel.Location = new System.Drawing.Point(856, 345);
+            this.btnCancel.Location = new System.Drawing.Point(862, 336);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(86, 29);
+            this.btnCancel.Size = new System.Drawing.Size(80, 40);
             this.btnCancel.TabIndex = 0;
             this.btnCancel.Text = "취소";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -85,10 +83,10 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSave.Location = new System.Drawing.Point(763, 345);
+            this.btnSave.Location = new System.Drawing.Point(776, 336);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(86, 29);
+            this.btnSave.Size = new System.Drawing.Size(80, 40);
             this.btnSave.TabIndex = 98;
             this.btnSave.Text = "저장";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -98,10 +96,10 @@
             // 
             this.btnAddRow.BackColor = System.Drawing.Color.Violet;
             this.btnAddRow.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnAddRow.Location = new System.Drawing.Point(870, 49);
+            this.btnAddRow.Location = new System.Drawing.Point(856, 50);
             this.btnAddRow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddRow.Name = "btnAddRow";
-            this.btnAddRow.Size = new System.Drawing.Size(33, 30);
+            this.btnAddRow.Size = new System.Drawing.Size(40, 40);
             this.btnAddRow.TabIndex = 99;
             this.btnAddRow.Text = "+";
             this.btnAddRow.UseVisualStyleBackColor = false;
@@ -111,10 +109,10 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Gold;
             this.btnDelete.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDelete.Location = new System.Drawing.Point(909, 50);
+            this.btnDelete.Location = new System.Drawing.Point(902, 50);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(33, 29);
+            this.btnDelete.Size = new System.Drawing.Size(40, 40);
             this.btnDelete.TabIndex = 102;
             this.btnDelete.Text = "-";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -141,8 +139,6 @@
             this.gridInsertMangeInput.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridInsertMangeInput.ColumnHeadersHeight = 29;
             this.gridInsertMangeInput.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column5,
-            this.com_no,
             this.com_type,
             this.com_name,
             this.com_licenseno,
@@ -176,20 +172,6 @@
             this.gridInsertMangeInput.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridInsertMangeInput.Size = new System.Drawing.Size(903, 226);
             this.gridInsertMangeInput.TabIndex = 103;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            // 
-            // com_no
-            // 
-            this.com_no.DataPropertyName = "com_no";
-            this.com_no.HeaderText = "거래처코드";
-            this.com_no.MinimumWidth = 6;
-            this.com_no.Name = "com_no";
-            this.com_no.ReadOnly = true;
             // 
             // com_type
             // 
@@ -230,7 +212,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(974, 399);
+            this.ClientSize = new System.Drawing.Size(1000, 400);
             this.Controls.Add(this.gridInsertMangeInput);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAddRow);
@@ -243,6 +225,7 @@
             this.Name = "info_1_2_inputacnt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "  ";
+            this.Load += new System.EventHandler(this.info_1_2_inputacnt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridInsertMangeInput)).EndInit();
             this.ResumeLayout(false);
@@ -259,8 +242,6 @@
         private System.Windows.Forms.Button btnAddRow;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView gridInsertMangeInput;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn com_no;
         private System.Windows.Forms.DataGridViewTextBoxColumn com_type;
         private System.Windows.Forms.DataGridViewTextBoxColumn com_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn com_licenseno;

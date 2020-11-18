@@ -38,8 +38,8 @@ namespace Haccp_MES._1_information
 
                 while (myreader.Read())
                 {
-                    string mno = myreader.GetString("ware_no");
-                    cbWareNo.Items.Add(mno);
+                    string wno = myreader.GetString("ware_no");
+                    cbWareNo.Items.Add(wno);
                 }
             }
             catch (Exception ex)
@@ -61,14 +61,30 @@ namespace Haccp_MES._1_information
 
                 while (myreader.Read())
                 {
-                    string mtype = myreader.GetString("ware_type");
-                    cbWareType.Items.Add(mtype);
+                    string wtype = myreader.GetString("ware_type");
+                    cbWareType.Items.Add(wtype);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            conn.Close();
+        }
+
+        public void renew()
+        {
+            conn.Open();
+            dtHead.Clear();
+            string warehouseInfoHeadQuery = "SELECT * FROM info_warehouse;";
+            cmd = new MySqlCommand(warehouseInfoHeadQuery, conn);
+
+            adapter = new MySqlDataAdapter(cmd);
+            adapter.Fill(dtHead);
+
+            gridManageInputHead.DataSource = dtHead;
+            lblHeadCount.Text = gridManageInputHead.Rows.Count.ToString();
+
             conn.Close();
         }
 
@@ -112,8 +128,8 @@ namespace Haccp_MES._1_information
         {
             conn.Open();
             dtHead.Clear();
-            string warehouseInfoHeadQuery = "SELECT * FROM info_warehouse WHERE ware_name LIKE '%" + txtWareName.Text +
-                                          "%' OR ware_type LIKE '" + cbWareType.SelectedItem + "' OR ware_no LIKE '" +
+            string warehouseInfoHeadQuery = "SELECT * FROM info_warehouse WHERE ware_name LIKE '" + txtWareName.Text +
+                                          "' OR ware_type LIKE '" + cbWareType.SelectedItem + "' OR ware_no LIKE '" +
                                           cbWareNo.SelectedItem + "' OR ware_use LIKE '" + cbWareUse.Text +"';";
 
             cmd = new MySqlCommand(warehouseInfoHeadQuery, conn);
@@ -141,26 +157,24 @@ namespace Haccp_MES._1_information
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            int i = 0;
+            conn.Open();
             foreach (DataGridViewRow drRow in gridManageInputHead.Rows)
             {
                 bool isChecked = Convert.ToBoolean(drRow.Cells[0].Value);
-
                 if (isChecked)
-                    gridManageInputHead.Rows.Remove(drRow);
-            }
-
-            foreach (DataRow drRow in dtHead.Rows)
-            {
-                if (drRow.RowState == DataRowState.Deleted)
                 {
-                    string deleteQuery = "DELETE FROM info_warehouse WHERE ware_no=@WARE_NO";
-                    conn.Open();
-                    cmd = new MySqlCommand(deleteQuery, conn);
-                    cmd.Parameters.AddWithValue("@WARE_NO", drRow["ware_no", DataRowVersion.Original]);
+                    int wn = Convert.ToInt32(gridManageInputHead.Rows[i].Cells["ware_no"].Value);
+                    string delete_query = "DELETE FROM info_warehouse WHERE ware_no = @WARE_NO;";
+                    cmd = new MySqlCommand(delete_query, conn);
+                    cmd.Parameters.AddWithValue("@WARE_NO", wn);
                     cmd.ExecuteNonQuery();
-                    conn.Close();
                 }
+                i++;
             }
+            conn.Close();
+            MessageBox.Show("삭제완료");
+            renew();
         }
 
         private void gridManageInputHead_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -220,5 +234,6 @@ namespace Haccp_MES._1_information
 
             btnSelect_Click(sender, e);
         }
+
     }
 }

@@ -31,10 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtPicker2 = new System.Windows.Forms.DateTimePicker();
             this.label17 = new System.Windows.Forms.Label();
@@ -99,19 +97,10 @@
             this.tblLayOutPnlBody.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(274, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(201, 12);
-            this.label6.TabIndex = 140;
-            this.label6.Text = "이건 일단 안쓸건데 혹시몰라 둡니다";
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Haccp_MES.Properties.Resources.list_2x;
-            this.pictureBox3.Location = new System.Drawing.Point(32, 390);
+            this.pictureBox3.Location = new System.Drawing.Point(26, 398);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(16, 16);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -123,24 +112,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label2.Location = new System.Drawing.Point(54, 388);
+            this.label2.Location = new System.Drawing.Point(46, 392);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 24);
             this.label2.TabIndex = 137;
             this.label2.Text = "재고 상세내역";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Red;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDelete.ForeColor = System.Drawing.Color.Transparent;
-            this.btnDelete.Location = new System.Drawing.Point(520, 21);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(42, 23);
-            this.btnDelete.TabIndex = 136;
-            this.btnDelete.Text = "삭제";
-            this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // groupBox1
             // 
@@ -163,7 +139,7 @@
             this.groupBox1.Controls.Add(this.txtMatName);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox1.Location = new System.Drawing.Point(100, 84);
+            this.groupBox1.Location = new System.Drawing.Point(100, 72);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(817, 82);
             this.groupBox1.TabIndex = 135;
@@ -237,7 +213,6 @@
             this.comBoxStockTakeType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comBoxStockTakeType.FormattingEnabled = true;
             this.comBoxStockTakeType.Items.AddRange(new object[] {
-            "전체",
             "추가",
             "차감"});
             this.comBoxStockTakeType.Location = new System.Drawing.Point(608, 56);
@@ -251,10 +226,10 @@
             this.btnSelectCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSelectCondition.ForeColor = System.Drawing.Color.Transparent;
             this.btnSelectCondition.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelectCondition.Location = new System.Drawing.Point(717, 12);
+            this.btnSelectCondition.Location = new System.Drawing.Point(725, 10);
             this.btnSelectCondition.Margin = new System.Windows.Forms.Padding(0);
             this.btnSelectCondition.Name = "btnSelectCondition";
-            this.btnSelectCondition.Size = new System.Drawing.Size(100, 25);
+            this.btnSelectCondition.Size = new System.Drawing.Size(88, 24);
             this.btnSelectCondition.TabIndex = 126;
             this.btnSelectCondition.Text = "조건 검색";
             this.btnSelectCondition.UseVisualStyleBackColor = false;
@@ -265,10 +240,10 @@
             this.btnDeleteCondition.BackColor = System.Drawing.Color.Red;
             this.btnDeleteCondition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnDeleteCondition.ForeColor = System.Drawing.Color.Transparent;
-            this.btnDeleteCondition.Location = new System.Drawing.Point(717, 53);
+            this.btnDeleteCondition.Location = new System.Drawing.Point(725, 54);
             this.btnDeleteCondition.Margin = new System.Windows.Forms.Padding(0);
             this.btnDeleteCondition.Name = "btnDeleteCondition";
-            this.btnDeleteCondition.Size = new System.Drawing.Size(100, 25);
+            this.btnDeleteCondition.Size = new System.Drawing.Size(88, 24);
             this.btnDeleteCondition.TabIndex = 126;
             this.btnDeleteCondition.Text = "조건 삭제";
             this.btnDeleteCondition.UseVisualStyleBackColor = false;
@@ -348,7 +323,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Haccp_MES.Properties.Resources.list_2x;
-            this.pictureBox2.Location = new System.Drawing.Point(32, 152);
+            this.pictureBox2.Location = new System.Drawing.Point(26, 146);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(16, 16);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -358,7 +333,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Haccp_MES.Properties.Resources.browser_4x;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 47);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 32);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -370,7 +345,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label5.Location = new System.Drawing.Point(70, 44);
+            this.label5.Location = new System.Drawing.Point(60, 26);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(187, 37);
             this.label5.TabIndex = 132;
@@ -381,10 +356,10 @@
             this.btnChangedHistory.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnChangedHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnChangedHistory.ForeColor = System.Drawing.Color.Transparent;
-            this.btnChangedHistory.Location = new System.Drawing.Point(704, 47);
+            this.btnChangedHistory.Location = new System.Drawing.Point(713, 49);
             this.btnChangedHistory.Margin = new System.Windows.Forms.Padding(0);
             this.btnChangedHistory.Name = "btnChangedHistory";
-            this.btnChangedHistory.Size = new System.Drawing.Size(100, 25);
+            this.btnChangedHistory.Size = new System.Drawing.Size(95, 24);
             this.btnChangedHistory.TabIndex = 131;
             this.btnChangedHistory.Text = "변경 내역 조회";
             this.btnChangedHistory.UseVisualStyleBackColor = false;
@@ -396,10 +371,10 @@
             this.btnSelectNow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSelectNow.ForeColor = System.Drawing.Color.Transparent;
             this.btnSelectNow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelectNow.Location = new System.Drawing.Point(817, 47);
+            this.btnSelectNow.Location = new System.Drawing.Point(822, 49);
             this.btnSelectNow.Margin = new System.Windows.Forms.Padding(0);
             this.btnSelectNow.Name = "btnSelectNow";
-            this.btnSelectNow.Size = new System.Drawing.Size(100, 25);
+            this.btnSelectNow.Size = new System.Drawing.Size(95, 24);
             this.btnSelectNow.TabIndex = 130;
             this.btnSelectNow.Text = "현 재고 조회";
             this.btnSelectNow.UseVisualStyleBackColor = false;
@@ -432,7 +407,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label1.Location = new System.Drawing.Point(54, 148);
+            this.label1.Location = new System.Drawing.Point(46, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 24);
             this.label1.TabIndex = 127;
@@ -460,6 +435,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridManageStockHead.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.gridManageStockHead.ColumnHeadersHeight = 29;
             this.gridManageStockHead.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column0,
             this.Column1,
@@ -476,7 +452,7 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridManageStockHead.DefaultCellStyle = dataGridViewCellStyle5;
             this.gridManageStockHead.EnableHeadersVisualStyles = false;
-            this.gridManageStockHead.Location = new System.Drawing.Point(31, 175);
+            this.gridManageStockHead.Location = new System.Drawing.Point(26, 170);
             this.gridManageStockHead.MultiSelect = false;
             this.gridManageStockHead.Name = "gridManageStockHead";
             this.gridManageStockHead.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -489,9 +465,10 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridManageStockHead.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.gridManageStockHead.RowHeadersVisible = false;
+            this.gridManageStockHead.RowHeadersWidth = 51;
             this.gridManageStockHead.RowTemplate.Height = 23;
             this.gridManageStockHead.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridManageStockHead.Size = new System.Drawing.Size(886, 196);
+            this.gridManageStockHead.Size = new System.Drawing.Size(886, 184);
             this.gridManageStockHead.TabIndex = 126;
             this.gridManageStockHead.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridManageStockHead_CellContentClick);
             // 
@@ -499,6 +476,7 @@
             // 
             this.Column0.DataPropertyName = "stock_wareHouseCode";
             this.Column0.HeaderText = "창고코드";
+            this.Column0.MinimumWidth = 6;
             this.Column0.Name = "Column0";
             this.Column0.ReadOnly = true;
             // 
@@ -506,6 +484,7 @@
             // 
             this.Column1.DataPropertyName = "stock_wareHouseName";
             this.Column1.HeaderText = "창고명";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
@@ -513,6 +492,7 @@
             // 
             this.Column7.DataPropertyName = "stock_MatCode";
             this.Column7.HeaderText = "품목코드";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
@@ -520,6 +500,7 @@
             // 
             this.Column2.DataPropertyName = "stock_matName";
             this.Column2.HeaderText = "품목명";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
@@ -527,6 +508,7 @@
             // 
             this.Column4.DataPropertyName = "stock_count";
             this.Column4.HeaderText = "수량";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
@@ -534,6 +516,7 @@
             // 
             this.Column5.DataPropertyName = "stock_matSpec";
             this.Column5.HeaderText = "수불단위";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
@@ -542,10 +525,10 @@
             this.btnUpdate.BackColor = System.Drawing.Color.Goldenrod;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnUpdate.ForeColor = System.Drawing.Color.Transparent;
-            this.btnUpdate.Location = new System.Drawing.Point(817, 389);
+            this.btnUpdate.Location = new System.Drawing.Point(823, 390);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(0);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(100, 25);
+            this.btnUpdate.Size = new System.Drawing.Size(88, 24);
             this.btnUpdate.TabIndex = 141;
             this.btnUpdate.Text = "수량 수정";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -582,7 +565,7 @@
             this.tblLayOutPnlBody.Controls.Add(this.label16, 2, 1);
             this.tblLayOutPnlBody.Controls.Add(this.label22, 0, 3);
             this.tblLayOutPnlBody.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tblLayOutPnlBody.Location = new System.Drawing.Point(32, 417);
+            this.tblLayOutPnlBody.Location = new System.Drawing.Point(26, 417);
             this.tblLayOutPnlBody.Name = "tblLayOutPnlBody";
             this.tblLayOutPnlBody.RowCount = 4;
             this.tblLayOutPnlBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -861,10 +844,8 @@
             this.Controls.Add(this.tblLayOutPnlBody);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -893,11 +874,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnSelectCondition;
         private System.Windows.Forms.Button btnDeleteCondition;

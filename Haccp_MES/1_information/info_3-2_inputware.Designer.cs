@@ -37,12 +37,11 @@
             this.btnAddRow = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.gridInsertWarehouseInput = new System.Windows.Forms.DataGridView();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.ware_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ware_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ware_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ware_use = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ware_etc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridInsertWarehouseInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -50,10 +49,10 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCancel.Location = new System.Drawing.Point(856, 345);
+            this.btnCancel.Location = new System.Drawing.Point(862, 336);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(86, 29);
+            this.btnCancel.Size = new System.Drawing.Size(80, 40);
             this.btnCancel.TabIndex = 0;
             this.btnCancel.Text = "취소";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -72,10 +71,10 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSave.Location = new System.Drawing.Point(763, 345);
+            this.btnSave.Location = new System.Drawing.Point(776, 336);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(86, 29);
+            this.btnSave.Size = new System.Drawing.Size(80, 40);
             this.btnSave.TabIndex = 98;
             this.btnSave.Text = "저장";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -85,10 +84,10 @@
             // 
             this.btnAddRow.BackColor = System.Drawing.Color.Violet;
             this.btnAddRow.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnAddRow.Location = new System.Drawing.Point(870, 50);
+            this.btnAddRow.Location = new System.Drawing.Point(856, 50);
             this.btnAddRow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddRow.Name = "btnAddRow";
-            this.btnAddRow.Size = new System.Drawing.Size(33, 29);
+            this.btnAddRow.Size = new System.Drawing.Size(40, 40);
             this.btnAddRow.TabIndex = 99;
             this.btnAddRow.Text = "+";
             this.btnAddRow.UseVisualStyleBackColor = false;
@@ -98,10 +97,10 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Gold;
             this.btnDelete.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDelete.Location = new System.Drawing.Point(909, 50);
+            this.btnDelete.Location = new System.Drawing.Point(902, 50);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(33, 29);
+            this.btnDelete.Size = new System.Drawing.Size(40, 40);
             this.btnDelete.TabIndex = 102;
             this.btnDelete.Text = "-";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -131,7 +130,6 @@
             this.gridInsertWarehouseInput.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridInsertWarehouseInput.ColumnHeadersHeight = 29;
             this.gridInsertWarehouseInput.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ware_no,
             this.ware_name,
             this.ware_type,
             this.ware_use,
@@ -165,25 +163,6 @@
             this.gridInsertWarehouseInput.Size = new System.Drawing.Size(903, 226);
             this.gridInsertWarehouseInput.TabIndex = 103;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Haccp_MES.Properties.Resources.aperture_3x;
-            this.pictureBox2.Location = new System.Drawing.Point(39, 46);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 97;
-            this.pictureBox2.TabStop = false;
-            // 
-            // ware_no
-            // 
-            this.ware_no.DataPropertyName = "ware_no";
-            this.ware_no.HeaderText = "창고코드";
-            this.ware_no.MinimumWidth = 6;
-            this.ware_no.Name = "ware_no";
-            this.ware_no.ReadOnly = true;
-            // 
             // ware_name
             // 
             this.ware_name.DataPropertyName = "ware_name";
@@ -212,11 +191,22 @@
             this.ware_etc.MinimumWidth = 6;
             this.ware_etc.Name = "ware_etc";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Haccp_MES.Properties.Resources.aperture_3x;
+            this.pictureBox2.Location = new System.Drawing.Point(39, 46);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 97;
+            this.pictureBox2.TabStop = false;
+            // 
             // info_3_2_inputware
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(974, 399);
+            this.ClientSize = new System.Drawing.Size(1000, 400);
             this.Controls.Add(this.gridInsertWarehouseInput);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAddRow);
@@ -246,7 +236,6 @@
         private System.Windows.Forms.Button btnAddRow;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView gridInsertWarehouseInput;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ware_no;
         private System.Windows.Forms.DataGridViewTextBoxColumn ware_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn ware_type;
         private System.Windows.Forms.DataGridViewTextBoxColumn ware_use;

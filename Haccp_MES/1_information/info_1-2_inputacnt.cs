@@ -49,19 +49,68 @@ namespace Haccp_MES._1_information
         private void btnSave_Click(object sender, EventArgs e)
         {
 
+            bool shit = true;
             conn.Open();
             for (int i = 0; i < gridInsertMangeInput.Rows.Count; i++)
-              {
-                
-                string input_query = "INSERT INTO info_company (com_type, com_name, com_licenseno, com_phoneno, com_rep_name) VALUES ('" + gridInsertMangeInput.Rows[i].Cells["com_type"].Value + "','" + gridInsertMangeInput.Rows[i].Cells["com_name"].Value + "','"
-                                    + gridInsertMangeInput.Rows[i].Cells["com_licenseno"].Value + "','" + gridInsertMangeInput.Rows[i].Cells["com_phoneno"].Value + "','" + gridInsertMangeInput.Rows[i].Cells["com_rep_name"].Value + "');";
-                cmd = new MySqlCommand(input_query, conn);
-                cmd.ExecuteNonQuery();
+            {
+
+                if (gridInsertMangeInput.Rows[i].Cells["com_type"].Value != null && gridInsertMangeInput.Rows[i].Cells["com_name"].Value != null)
+                {
+                    string input_query = "INSERT INTO info_material (com_type, com_name, com_licenseno, com_phoneno, com_rep_name) VALUES (@COM_TYPE, @COM_NAME, @COM_LICENSENO, @COM_PHONENO, @COM_REP_NAME);";
+
+                    cmd = new MySqlCommand(input_query, conn);
+
+                    cmd.Parameters.AddWithValue("@COM_TYPE", gridInsertMangeInput.Rows[i].Cells["com_type"].Value.ToString());
+                    cmd.Parameters.AddWithValue("@COM_NAME", gridInsertMangeInput.Rows[i].Cells["com_name"].Value.ToString());
+
+                    if (gridInsertMangeInput.Rows[i].Cells["com_licenseno"].Value != null)
+                    {
+                        cmd.Parameters.AddWithValue("@COM_LICENSENO", gridInsertMangeInput.Rows[i].Cells["com_licenseno"].Value.ToString());
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@COM_LICENSENO", "");
+                    }
+
+                    if (gridInsertMangeInput.Rows[i].Cells["com_phoneno"].Value != null)
+                    {
+                        cmd.Parameters.AddWithValue("@COM_PHONENO", Convert.ToInt32(gridInsertMangeInput.Rows[i].Cells["com_phoneno"].Value));
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@COM_PHONENO", "0");
+                    }
+
+                    if (gridInsertMangeInput.Rows[i].Cells["com_rep_name"].Value != null)
+                    {
+                        cmd.Parameters.AddWithValue("@COM_REP_NAME", gridInsertMangeInput.Rows[i].Cells["com_rep_name"].Value.ToString());
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@COM_REP_NAME", "");
+                    }
+
+                    cmd.ExecuteNonQuery();
+                }
+                else
+                {
+                    MessageBox.Show("값을 입력해주세요!");
+                    shit = false;
+                    break;
+                }
             }
-            MessageBox.Show("저장완료");
+            if (shit)
+            {
+                MessageBox.Show("저장완료");
+            }
             gridInsertMangeInput.Rows.Clear();
             conn.Close();
 
+
+        }
+
+        private void info_1_2_inputacnt_Load(object sender, EventArgs e)
+        {
 
         }
     }

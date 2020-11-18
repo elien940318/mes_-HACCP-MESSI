@@ -118,8 +118,6 @@ namespace Haccp_MES._2_management
                 {
                     conn.Open();
 
-
-
                     string SelectQuery =
                         "SELECT * FROM manage_curmat WHERE mat_no=@MAT_NO AND ware_no=@WARE_NO;";
 

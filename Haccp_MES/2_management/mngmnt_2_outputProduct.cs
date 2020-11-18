@@ -86,11 +86,11 @@ namespace Haccp_MES._2_management
             // 하지만, totprc의 값은 컬럼으로 저장되지 않고 가져올때 계산하여 값을 반환하므로 추가적인 수정은 필요없으므로 쿼리로 처리한다.
 
             string UpdateQuery =
-                "UPDATE manage_curmat SET curmat_count = curmat_count - (SELECT output_count FROM manage_output WHERE output_idx=@OUTPUT_IDX) + @OUTPUT_COUNT " +
+                "UPDATE manage_curmat SET curmat_count = curmat_count + (SELECT output_count FROM manage_output WHERE output_idx=@OUTPUT_IDX) + @OUTPUT_COUNT " +
                 "WHERE ware_no = (SELECT ware_no FROM manage_output WHERE output_idx=@OUTPUT_IDX) AND mat_no = (SELECT mat_no FROM manage_output WHERE output_idx=@OUTPUT_IDX); " +
                 "UPDATE manage_output " +
-                "SET output_count=@output_COUNT, output_admin=@output_ADMIN, output_etc=@output_ETC " +
-                "WHERE output_idx=@output_IDX;";
+                "SET output_count=@OUTPUT_COUNT, output_admin=@OUTPUT_ADMIN, output_etc=@OUTPUT_ETC " +
+                "WHERE output_idx=@OUTPUT_IDX;";
             cmd = new MySqlCommand(UpdateQuery, conn);
             cmd.Parameters.AddWithValue("@OUTPUT_COUNT", Convert.ToInt32(updateDatas[0]));
             cmd.Parameters.AddWithValue("@OUTPUT_ADMIN", updateDatas[1]);
