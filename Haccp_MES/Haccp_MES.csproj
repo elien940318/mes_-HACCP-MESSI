@@ -215,6 +215,12 @@
       <DependentUpon>Prod_2_PerformanceMng.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseInfo.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +233,7 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainInstance.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Splash_Form.cs">
@@ -295,6 +302,9 @@
     <EmbeddedResource Include="3_production\Prod_2_PerformanceMng.resx">
       <DependentUpon>Prod_2_PerformanceMng.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -331,6 +341,7 @@
   <ItemGroup>
     <None Include="png\loop-circular-3x.png" />
     <None Include="png\magnifying-glass-4x.png" />
+    <None Include="png\HACCP_MESSI_logo.png" />
     <Content Include="png\miniLogo.png" />
   </ItemGroup>
   <ItemGroup>

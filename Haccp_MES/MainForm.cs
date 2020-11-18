@@ -481,15 +481,34 @@ namespace Haccp_MES
         }
 
         #endregion
-
+        private void LoginSuccess(string userName)
+        {
+            MessageBox.Show(userName + "님 환영합니다.");
+        }
         private void MainForm_Load(object sender, EventArgs e)
         {
-            tabBtnActiveOn(tabHome);
-            OpenChildForm(new Home());
-
             // 앞으로 가져오기위해 최소화 -> 창 띄우기
             this.WindowState = FormWindowState.Minimized;
             this.WindowState = FormWindowState.Normal;
+            LoginForm loginForm = new LoginForm();
+            loginForm.loginHandler += new EventHandler(LoginSuccess);
+
+            switch (loginForm.ShowDialog())
+            {
+                case DialogResult.None:
+                    break;
+                case DialogResult.OK:
+                    break;
+                case DialogResult.Cancel:
+                    Dispose();
+                    break;
+                default:
+                    break;
+            }
+
+            tabBtnActiveOn(tabHome);
+            OpenChildForm(new Home());
+
 
             // 앞으로 가져오라는 명령어인데 비쥬얼 스튜디오 보다는 뒤로 밀리네요.
             this.BringToFront();

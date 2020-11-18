@@ -176,7 +176,7 @@ namespace Haccp_MES._2_management
                 CheckBox cb = new CheckBox();
                 cb.Size = new Size(nChkBoxWidth, nChkBoxHeight);
                 cb.Location = pt;
-                cb.CheckedChanged += new EventHandler(gvSheetListCheckBox_CheckedChanged);
+                cb.CheckedChanged += new System.EventHandler(gvSheetListCheckBox_CheckedChanged);
                 cb.FlatStyle = FlatStyle.Flat;
                 
                 ((DataGridView)sender).Controls.Add(cb);
