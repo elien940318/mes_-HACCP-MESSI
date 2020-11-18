@@ -16,6 +16,7 @@ namespace Haccp_MES._1_information
         MySqlConnection conn;
         MySqlCommand cmd;
 
+
         public info_3_2_inputware()
         {
             InitializeComponent();

@@ -72,6 +72,22 @@ namespace Haccp_MES._1_information
             }
             conn.Close();
         }
+        
+        public void renew()
+        {
+            conn.Open();
+            dtHead.Clear();
+            string companyInfoHeadQuery = "SELECT * FROM info_company;";
+            cmd = new MySqlCommand(companyInfoHeadQuery, conn);
+
+            adapter = new MySqlDataAdapter(cmd);
+            adapter.Fill(dtHead);
+
+            gridManageInputHead.DataSource = dtHead;
+            lblHeadCount.Text = gridManageInputHead.Rows.Count.ToString();
+
+            conn.Close();
+        }
 
 
         //신규 버튼 누르면 창띄우기
@@ -176,12 +192,6 @@ namespace Haccp_MES._1_information
         }
 
 
-        private void gridManageInputHead_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridView view = sender as DataGridView;
-
-            view.SelectedRows[0].Cells[0].Value = !Convert.ToBoolean(view.SelectedRows[0].Cells[0].Value);
-        }
 
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -205,6 +215,28 @@ namespace Haccp_MES._1_information
             conn.Close();
 
             btnSelect_Click(sender, e);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            conn.Open();
+            foreach (DataGridViewRow drRow in gridManageInputHead.Rows)
+            {
+                bool isChecked = Convert.ToBoolean(drRow.Cells[0].Value);
+                if (isChecked)
+                {
+                    int cn = Convert.ToInt32(gridManageInputHead.Rows[i].Cells["com_no"].Value);
+                    string delete_query = "DELETE FROM info_company WHERE com_no = @COM_NO;";
+                    cmd = new MySqlCommand(delete_query, conn);
+                    cmd.Parameters.AddWithValue("@COM_NO", cn);
+                    cmd.ExecuteNonQuery();
+                }
+                i++;
+            }
+            conn.Close();
+            MessageBox.Show("삭제완료");
+            renew();
         }
     }
 }

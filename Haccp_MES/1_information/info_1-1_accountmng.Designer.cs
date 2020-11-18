@@ -41,13 +41,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gridManageInputHead = new System.Windows.Forms.DataGridView();
-            this.colCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.input_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbComNo = new System.Windows.Forms.ComboBox();
             this.cbComType = new System.Windows.Forms.ComboBox();
@@ -72,6 +65,14 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSelect = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.colCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.com_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.input_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridManageInputHead)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tblLyoutPnl.SuspendLayout();
@@ -128,7 +129,7 @@
             this.btnInsert.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnInsert.ForeColor = System.Drawing.Color.Transparent;
-            this.btnInsert.Location = new System.Drawing.Point(993, 38);
+            this.btnInsert.Location = new System.Drawing.Point(945, 36);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(48, 29);
@@ -191,7 +192,7 @@
             this.gridManageInputHead.ColumnHeadersHeight = 29;
             this.gridManageInputHead.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCheck,
-            this.Column2,
+            this.com_no,
             this.input_date,
             this.Column13,
             this.Column3,
@@ -226,78 +227,6 @@
             this.gridManageInputHead.Size = new System.Drawing.Size(1012, 245);
             this.gridManageInputHead.TabIndex = 81;
             this.gridManageInputHead.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridManageInputHead_CellContentClick);
-            this.gridManageInputHead.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridManageInputHead_CellContentDoubleClick);
-            // 
-            // colCheck
-            // 
-            this.colCheck.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colCheck.DataPropertyName = "chkbox";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle2.NullValue = false;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.colCheck.DefaultCellStyle = dataGridViewCellStyle2;
-            this.colCheck.FalseValue = "false";
-            this.colCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.colCheck.Frozen = true;
-            this.colCheck.HeaderText = "";
-            this.colCheck.MinimumWidth = 6;
-            this.colCheck.Name = "colCheck";
-            this.colCheck.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colCheck.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colCheck.TrueValue = "true";
-            this.colCheck.Width = 89;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "com_no";
-            this.Column2.HeaderText = "거래처코드";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // input_date
-            // 
-            this.input_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.input_date.DataPropertyName = "com_type";
-            this.input_date.HeaderText = "거래처유형";
-            this.input_date.MinimumWidth = 6;
-            this.input_date.Name = "input_date";
-            this.input_date.ReadOnly = true;
-            this.input_date.Width = 88;
-            // 
-            // Column13
-            // 
-            this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column13.DataPropertyName = "com_name";
-            this.Column13.HeaderText = "거래처명";
-            this.Column13.MinimumWidth = 6;
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            this.Column13.Width = 89;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "com_licenseno";
-            this.Column3.HeaderText = "사업자번호";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "com_phoneno";
-            this.Column5.HeaderText = "전화번호";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            // 
-            // Column15
-            // 
-            this.Column15.DataPropertyName = "com_rep_name";
-            this.Column15.HeaderText = "대표자";
-            this.Column15.MinimumWidth = 6;
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -554,7 +483,7 @@
             this.btnSerch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSerch.ForeColor = System.Drawing.Color.Transparent;
             this.btnSerch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSerch.Location = new System.Drawing.Point(946, 38);
+            this.btnSerch.Location = new System.Drawing.Point(898, 36);
             this.btnSerch.Margin = new System.Windows.Forms.Padding(0);
             this.btnSerch.Name = "btnSerch";
             this.btnSerch.Size = new System.Drawing.Size(47, 29);
@@ -605,7 +534,7 @@
             this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSelect.ForeColor = System.Drawing.Color.Transparent;
             this.btnSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelect.Location = new System.Drawing.Point(918, 38);
+            this.btnSelect.Location = new System.Drawing.Point(870, 36);
             this.btnSelect.Margin = new System.Windows.Forms.Padding(0);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(27, 29);
@@ -614,12 +543,98 @@
             this.btnSelect.UseVisualStyleBackColor = false;
             this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnDelete.ForeColor = System.Drawing.Color.Transparent;
+            this.btnDelete.Location = new System.Drawing.Point(993, 36);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(48, 29);
+            this.btnDelete.TabIndex = 112;
+            this.btnDelete.Text = "삭제";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // colCheck
+            // 
+            this.colCheck.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colCheck.DataPropertyName = "chkbox";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle2.NullValue = false;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.colCheck.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colCheck.FalseValue = "false";
+            this.colCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.colCheck.Frozen = true;
+            this.colCheck.HeaderText = "";
+            this.colCheck.MinimumWidth = 6;
+            this.colCheck.Name = "colCheck";
+            this.colCheck.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colCheck.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.colCheck.TrueValue = "true";
+            this.colCheck.Width = 89;
+            // 
+            // com_no
+            // 
+            this.com_no.DataPropertyName = "com_no";
+            this.com_no.HeaderText = "거래처코드";
+            this.com_no.MinimumWidth = 6;
+            this.com_no.Name = "com_no";
+            this.com_no.ReadOnly = true;
+            // 
+            // input_date
+            // 
+            this.input_date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.input_date.DataPropertyName = "com_type";
+            this.input_date.HeaderText = "거래처유형";
+            this.input_date.MinimumWidth = 6;
+            this.input_date.Name = "input_date";
+            this.input_date.ReadOnly = true;
+            this.input_date.Width = 88;
+            // 
+            // Column13
+            // 
+            this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column13.DataPropertyName = "com_name";
+            this.Column13.HeaderText = "거래처명";
+            this.Column13.MinimumWidth = 6;
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 89;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "com_licenseno";
+            this.Column3.HeaderText = "사업자번호";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "com_phoneno";
+            this.Column5.HeaderText = "전화번호";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            // 
+            // Column15
+            // 
+            this.Column15.DataPropertyName = "com_rep_name";
+            this.Column15.HeaderText = "대표자";
+            this.Column15.MinimumWidth = 6;
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            // 
             // info_1_1_accountmng
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1085, 714);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSerch);
             this.Controls.Add(this.tblLyoutPnl);
             this.Controls.Add(this.pictureBox3);
@@ -682,17 +697,18 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label lbl_com_license;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn colCheck;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn input_date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.Button btnSerch;
         private System.Windows.Forms.ComboBox cbComNo;
         private System.Windows.Forms.TextBox txtcom_type;
         private System.Windows.Forms.TextBox txtcom_rep_name;
         private System.Windows.Forms.TextBox txtcom_phone;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colCheck;
+        private System.Windows.Forms.DataGridViewTextBoxColumn com_no;
+        private System.Windows.Forms.DataGridViewTextBoxColumn input_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
     }
 }

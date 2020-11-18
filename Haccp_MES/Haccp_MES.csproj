@@ -250,6 +250,9 @@
     <EmbeddedResource Include="1_information\info_4-1_BOMMng.resx">
       <DependentUpon>info_4-1_BOMMng.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="1_information\info_4-2_inputBOM.resx">
+      <DependentUpon>info_4-2_inputBOM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="2_management\mngmnt_1-1_insertData.resx">
       <DependentUpon>mngmnt_1-1_insertData.cs</DependentUpon>
     </EmbeddedResource>

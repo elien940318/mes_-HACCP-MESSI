@@ -140,5 +140,7 @@ namespace Haccp_MES._1_information
             gridBOMinfo.DataSource = dtBody;
             conn.Close();
         }
+
+       
     }
 }
