@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridSelectBOM = new System.Windows.Forms.DataGridView();
+            this.index1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.bom_parent_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bom_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bom_count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,10 +48,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtBomCount = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.index1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.bom_parent_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bom_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bom_count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridSelectBOM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -66,57 +66,86 @@
             this.gridSelectBOM.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridSelectBOM.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gridSelectBOM.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridSelectBOM.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSelectBOM.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gridSelectBOM.ColumnHeadersHeight = 29;
             this.gridSelectBOM.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.index1,
             this.bom_parent_no,
             this.bom_no,
             this.bom_count});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridSelectBOM.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridSelectBOM.DefaultCellStyle = dataGridViewCellStyle5;
             this.gridSelectBOM.EnableHeadersVisualStyles = false;
             this.gridSelectBOM.Location = new System.Drawing.Point(39, 158);
             this.gridSelectBOM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridSelectBOM.MultiSelect = false;
             this.gridSelectBOM.Name = "gridSelectBOM";
             this.gridSelectBOM.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSelectBOM.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSelectBOM.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.gridSelectBOM.RowHeadersVisible = false;
             this.gridSelectBOM.RowHeadersWidth = 51;
             this.gridSelectBOM.RowTemplate.Height = 23;
             this.gridSelectBOM.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSelectBOM.Size = new System.Drawing.Size(903, 170);
+            this.gridSelectBOM.Size = new System.Drawing.Size(903, 171);
             this.gridSelectBOM.TabIndex = 110;
+            // 
+            // index1
+            // 
+            this.index1.HeaderText = "";
+            this.index1.MinimumWidth = 6;
+            this.index1.Name = "index1";
+            // 
+            // bom_parent_no
+            // 
+            this.bom_parent_no.DataPropertyName = "bom_parent_no";
+            this.bom_parent_no.HeaderText = "bom코드";
+            this.bom_parent_no.MinimumWidth = 6;
+            this.bom_parent_no.Name = "bom_parent_no";
+            this.bom_parent_no.ReadOnly = true;
+            // 
+            // bom_no
+            // 
+            this.bom_no.DataPropertyName = "bom_no";
+            this.bom_no.HeaderText = "재료코드";
+            this.bom_no.MinimumWidth = 6;
+            this.bom_no.Name = "bom_no";
+            this.bom_no.ReadOnly = true;
+            // 
+            // bom_count
+            // 
+            this.bom_count.DataPropertyName = "bom_count";
+            this.bom_count.HeaderText = "수량";
+            this.bom_count.MinimumWidth = 6;
+            this.bom_count.Name = "bom_count";
             // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnUpdate.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnUpdate.Location = new System.Drawing.Point(749, 345);
+            this.btnUpdate.Location = new System.Drawing.Point(690, 337);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(47, 29);
+            this.btnUpdate.Size = new System.Drawing.Size(80, 40);
             this.btnUpdate.TabIndex = 107;
             this.btnUpdate.Text = "수정";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -146,10 +175,10 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCancel.Location = new System.Drawing.Point(856, 345);
+            this.btnCancel.Location = new System.Drawing.Point(862, 337);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(86, 29);
+            this.btnCancel.Size = new System.Drawing.Size(80, 40);
             this.btnCancel.TabIndex = 104;
             this.btnCancel.Text = "취소";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -159,10 +188,10 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDelete.Location = new System.Drawing.Point(802, 345);
+            this.btnDelete.Location = new System.Drawing.Point(776, 337);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(47, 29);
+            this.btnDelete.Size = new System.Drawing.Size(80, 40);
             this.btnDelete.TabIndex = 111;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -222,49 +251,20 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnAdd.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnAdd.Location = new System.Drawing.Point(856, 108);
+            this.btnAdd.Location = new System.Drawing.Point(842, 101);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(85, 29);
+            this.btnAdd.Size = new System.Drawing.Size(100, 40);
             this.btnAdd.TabIndex = 118;
             this.btnAdd.Text = "신규 등록";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // index1
-            // 
-            this.index1.HeaderText = "";
-            this.index1.MinimumWidth = 6;
-            this.index1.Name = "index1";
-            // 
-            // bom_parent_no
-            // 
-            this.bom_parent_no.DataPropertyName = "bom_parent_no";
-            this.bom_parent_no.HeaderText = "bom코드";
-            this.bom_parent_no.MinimumWidth = 6;
-            this.bom_parent_no.Name = "bom_parent_no";
-            this.bom_parent_no.ReadOnly = true;
-            // 
-            // bom_no
-            // 
-            this.bom_no.DataPropertyName = "bom_no";
-            this.bom_no.HeaderText = "재료코드";
-            this.bom_no.MinimumWidth = 6;
-            this.bom_no.Name = "bom_no";
-            this.bom_no.ReadOnly = true;
-            // 
-            // bom_count
-            // 
-            this.bom_count.DataPropertyName = "bom_count";
-            this.bom_count.HeaderText = "수량";
-            this.bom_count.MinimumWidth = 6;
-            this.bom_count.Name = "bom_count";
-            // 
             // info_4_2_inputBOM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(974, 399);
+            this.ClientSize = new System.Drawing.Size(1000, 400);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtBomCount);
             this.Controls.Add(this.label4);
