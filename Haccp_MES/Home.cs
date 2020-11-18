@@ -26,17 +26,45 @@ namespace Haccp_MES
         private void Home_Load(object sender, EventArgs e)
         {
             conn = new MySqlConnection(DatabaseInfo.DBConnectStr());
+
+            #region ColumnChart: 생산량
+            conn.Open();
+            string getProductionCapacityQuery =
+                "SELECT tmp2.sequential_day, " +
+                "       CASE WHEN tmp1.capacity IS NULL " +
+                "       THEN '0' " +
+                "       ELSE tmp1.capacity END " +
+                "       AS capacity " + 
+                "FROM " +
+                "       (SELECT DATE_FORMAT(mngodr_date, '%Y-%m-%d') AS 'day', " +
+                "               SUM(mngodr_count) as 'capacity' FROM production_mngodr GROUP BY day ORDER BY day) " +
+                "       as tmp1 " +
+                "       RIGHT JOIN " +
+                "       (SELECT DATE_FORMAT(NOW() - INTERVAL seq.seq DAY, '%Y-%m-%d') AS sequential_day " +
+                "       FROM " +
+                "           (SELECT A.N + 5*(B.N + 5*(C.N + 5*(D.N + 5*(E.N + 5*(F.N))))) AS seq " +
+                "           FROM    (SELECT 0 AS N UNION SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4) AS A " +
+                "                   JOIN (SELECT 0 AS N UNION SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4) AS B " +
+                "                   JOIN (SELECT 0 AS N UNION SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4) AS C " +
+                "                   JOIN (SELECT 0 AS N UNION SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4) AS D " +
+                "                   JOIN (SELECT 0 AS N UNION SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4) AS E " +
+                "                   JOIN (SELECT 0 AS N UNION SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4) AS F )" +
+                "           AS seq " +
+                "       WHERE seq.seq <= 30 ORDER BY sequential_day) " +
+                "       as tmp2 " +
+                "ON tmp1.day = tmp2.sequential_day " +
+                "ORDER BY tmp2.sequential_day ASC ";
+
+            cmd = new MySqlCommand(getProductionCapacityQuery, conn);
+            adapter = new MySqlDataAdapter(cmd);
             dt = new DataTable();
-            #region 차트1 테스용
-            chart1.Series[0].Points.Add(110);
-            chart1.Series[0].Points.Add(30);
-            chart1.Series[0].Points.Add(80);
-            chart1.Series[0].Points.Add(160);
-            chart1.Series[0].Points.Add(50);
-            chart1.Series[0].Points.Add(48);
-            chart1.Series[0].Points.Add(68);
-            chart1.Series[0].Points.Add(99);
-            chart1.Series[0].Points.Add(36);
+            adapter.Fill(dt);
+            foreach (DataRow drRow in dt.Rows)
+            {
+                chart1.Series[0].Points.Add(Convert.ToInt32(drRow[1]));
+            }
+
+            conn.Close();
             #endregion
 
             #region 차트2 테스용
@@ -60,6 +88,8 @@ namespace Haccp_MES
                 "WHERE prodrecod_date BETWEEN DATE_ADD(NOW(), INTERVAL-1 MONTH) AND NOW();";
             cmd = new MySqlCommand(getProductionRateQuery, conn);
             adapter = new MySqlDataAdapter(cmd);
+            
+            dt = new DataTable();
             dt.Clear();
             adapter.Fill(dt);
             conn.Close();
