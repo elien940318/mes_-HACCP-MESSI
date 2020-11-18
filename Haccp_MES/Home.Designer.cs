@@ -277,7 +277,7 @@
             this.pnlMngInput.Name = "pnlMngInput";
             this.pnlMngInput.Size = new System.Drawing.Size(223, 24);
             this.pnlMngInput.TabIndex = 6;
-            this.pnlMngInput.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMngInput_Paint);
+
             // 
             // label10
             // 
@@ -334,7 +334,7 @@
             this.pnlWorkOrder.Name = "pnlWorkOrder";
             this.pnlWorkOrder.Size = new System.Drawing.Size(222, 24);
             this.pnlWorkOrder.TabIndex = 9;
-            this.pnlWorkOrder.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlWorkOrder_Paint);
+
             // 
             // label13
             // 
@@ -369,7 +369,7 @@
             this.pnlProdRate.Name = "pnlProdRate";
             this.pnlProdRate.Size = new System.Drawing.Size(223, 24);
             this.pnlProdRate.TabIndex = 10;
-            this.pnlProdRate.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlProdRate_Paint);
+
             // 
             // label15
             // 
@@ -404,7 +404,7 @@
             this.pnlMngOutput.Name = "pnlMngOutput";
             this.pnlMngOutput.Size = new System.Drawing.Size(223, 24);
             this.pnlMngOutput.TabIndex = 11;
-            this.pnlMngOutput.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMngOutput_Paint);
+
             // 
             // chartProductionCapacity
             // 
