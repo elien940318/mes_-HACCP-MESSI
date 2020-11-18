@@ -77,8 +77,7 @@ namespace Haccp_MES._2_management
                 "FROM manage_realstocktake, info_warehouse, info_material " +
                 "WHERE manage_realstocktake.ware_no = info_warehouse.ware_no " +
                     "AND manage_realstocktake.mat_no = info_material.mat_no " +
-                "GROUP BY manage_realstocktake.ware_no, manage_realstocktake.mat_no " +
-                "ORDER BY manage_realstocktake.ware_no;";
+                "ORDER BY stocktake_no;";
 
             cmd = new MySqlCommand(StockHeadQuery, conn);
             adapter = new MySqlDataAdapter(cmd);
