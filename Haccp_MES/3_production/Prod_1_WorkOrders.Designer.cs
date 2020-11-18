@@ -50,8 +50,12 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cbxWareHouse = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.wkEndDate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.cbxWorkNo = new System.Windows.Forms.ComboBox();
@@ -60,11 +64,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.wkStartDate = new System.Windows.Forms.DateTimePicker();
-            this.btnInsert = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.btnSelect = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -76,10 +80,6 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.cbxWareHouse = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridManageInputHead)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -91,7 +91,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Haccp_MES.Properties.Resources.list_2x;
-            this.pictureBox2.Location = new System.Drawing.Point(28, 198);
+            this.pictureBox2.Location = new System.Drawing.Point(28, 187);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(16, 16);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -104,7 +104,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label9.Location = new System.Drawing.Point(50, 194);
+            this.label9.Location = new System.Drawing.Point(50, 183);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(136, 24);
             this.label9.TabIndex = 132;
@@ -153,7 +153,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridManageInputHead.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridManageInputHead.EnableHeadersVisualStyles = false;
-            this.gridManageInputHead.Location = new System.Drawing.Point(27, 226);
+            this.gridManageInputHead.Location = new System.Drawing.Point(27, 215);
             this.gridManageInputHead.MultiSelect = false;
             this.gridManageInputHead.Name = "gridManageInputHead";
             this.gridManageInputHead.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -257,19 +257,19 @@
             this.Column6.HeaderText = "창고코드";
             this.Column6.Name = "Column6";
             // 
-            // btnDelete
+            // btnCreate
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDelete.ForeColor = System.Drawing.Color.Transparent;
-            this.btnDelete.Location = new System.Drawing.Point(830, 33);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(42, 23);
-            this.btnDelete.TabIndex = 130;
-            this.btnDelete.Text = "등록";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnCreate.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCreate.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCreate.Location = new System.Drawing.Point(830, 33);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(42, 23);
+            this.btnCreate.TabIndex = 130;
+            this.btnCreate.Text = "등록";
+            this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // groupBox1
             // 
@@ -285,11 +285,47 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.wkStartDate);
-            this.groupBox1.Location = new System.Drawing.Point(28, 72);
+            this.groupBox1.Location = new System.Drawing.Point(28, 61);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(886, 93);
             this.groupBox1.TabIndex = 129;
             this.groupBox1.TabStop = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(596, 13);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(91, 21);
+            this.textBox2.TabIndex = 140;
+            // 
+            // cbxWareHouse
+            // 
+            this.cbxWareHouse.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cbxWareHouse.FormattingEnabled = true;
+            this.cbxWareHouse.Location = new System.Drawing.Point(693, 13);
+            this.cbxWareHouse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxWareHouse.Name = "cbxWareHouse";
+            this.cbxWareHouse.Size = new System.Drawing.Size(109, 21);
+            this.cbxWareHouse.TabIndex = 139;
+            this.cbxWareHouse.SelectedIndexChanged += new System.EventHandler(this.cbxWareHouse_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(537, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.TabIndex = 138;
+            this.label2.Text = "보관창고";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(306, 13);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(91, 21);
+            this.textBox1.TabIndex = 137;
             // 
             // wkEndDate
             // 
@@ -371,19 +407,19 @@
             this.wkStartDate.TabIndex = 99;
             this.wkStartDate.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             // 
-            // btnInsert
+            // btnSearch
             // 
-            this.btnInsert.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnInsert.ForeColor = System.Drawing.Color.Transparent;
-            this.btnInsert.Location = new System.Drawing.Point(788, 33);
-            this.btnInsert.Margin = new System.Windows.Forms.Padding(0);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(42, 23);
-            this.btnInsert.TabIndex = 128;
-            this.btnInsert.Text = "조회";
-            this.btnInsert.UseVisualStyleBackColor = false;
-            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            this.btnSearch.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSearch.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSearch.Location = new System.Drawing.Point(788, 33);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(42, 23);
+            this.btnSearch.TabIndex = 128;
+            this.btnSearch.Text = "조회";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnSelect
             // 
@@ -421,25 +457,25 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(167, 37);
             this.label5.TabIndex = 125;
-            this.label5.Text = "작업지시등록";
+            this.label5.Text = "작업지시관리";
             // 
-            // button3
+            // btnDelete
             // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(872, 33);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(42, 23);
-            this.button3.TabIndex = 134;
-            this.button3.Text = "삭제";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnDelete.ForeColor = System.Drawing.Color.Transparent;
+            this.btnDelete.Location = new System.Drawing.Point(872, 33);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(42, 23);
+            this.btnDelete.TabIndex = 134;
+            this.btnDelete.Text = "삭제";
+            this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Location = new System.Drawing.Point(28, 179);
+            this.panel1.Location = new System.Drawing.Point(28, 168);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(882, 1);
             this.panel1.TabIndex = 135;
@@ -447,7 +483,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Haccp_MES.Properties.Resources.list_2x;
-            this.pictureBox3.Location = new System.Drawing.Point(28, 392);
+            this.pictureBox3.Location = new System.Drawing.Point(28, 375);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(16, 16);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -459,7 +495,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label4.Location = new System.Drawing.Point(50, 388);
+            this.label4.Location = new System.Drawing.Point(50, 371);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 24);
             this.label4.TabIndex = 136;
@@ -504,7 +540,7 @@
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 415);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 398);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -520,7 +556,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(887, 132);
+            this.dataGridView1.Size = new System.Drawing.Size(887, 143);
             this.dataGridView1.TabIndex = 138;
             // 
             // dataGridViewCheckBoxColumn1
@@ -586,46 +622,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel2.Location = new System.Drawing.Point(28, 380);
+            this.panel2.Location = new System.Drawing.Point(28, 363);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(882, 1);
             this.panel2.TabIndex = 136;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(306, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(91, 21);
-            this.textBox1.TabIndex = 137;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(596, 13);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(91, 21);
-            this.textBox2.TabIndex = 140;
-            // 
-            // cbxWareHouse
-            // 
-            this.cbxWareHouse.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.cbxWareHouse.FormattingEnabled = true;
-            this.cbxWareHouse.Location = new System.Drawing.Point(693, 13);
-            this.cbxWareHouse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbxWareHouse.Name = "cbxWareHouse";
-            this.cbxWareHouse.Size = new System.Drawing.Size(109, 21);
-            this.cbxWareHouse.TabIndex = 139;
-            this.cbxWareHouse.SelectedIndexChanged += new System.EventHandler(this.cbxWareHouse_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(537, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
-            this.label2.TabIndex = 138;
-            this.label2.Text = "보관창고";
             // 
             // Prod_1_WorkOrders
             // 
@@ -638,13 +638,13 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.gridManageInputHead);
-            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnInsert);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
@@ -669,19 +669,18 @@
 
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView gridManageInputHead;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cbxMatCode;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker wkStartDate;
-        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.ComboBox cbxWorkNo;
         private System.Windows.Forms.DateTimePicker wkEndDate;
         private System.Windows.Forms.Label label3;
@@ -710,5 +709,6 @@
         private System.Windows.Forms.ComboBox cbxWareHouse;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView gridManageInputHead;
     }
 }

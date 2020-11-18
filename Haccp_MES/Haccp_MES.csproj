@@ -184,6 +184,18 @@
     <Compile Include="2_management\mngmnt_4_RealStockTaking.Designer.cs">
       <DependentUpon>mngmnt_4_RealStockTaking.cs</DependentUpon>
     </Compile>
+    <Compile Include="3_production\Pop_WorkOrder_Count.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_production\Pop_WorkOrder_Count.Designer.cs">
+      <DependentUpon>Pop_WorkOrder_Count.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3_production\Prod_1-1_WorkOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_production\Prod_1-1_WorkOrders.Designer.cs">
+      <DependentUpon>Prod_1-1_WorkOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="3_production\Prod_1_WorkOrders.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +279,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="2_management\mngmnt_4_RealStockTaking.resx">
       <DependentUpon>mngmnt_4_RealStockTaking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3_production\Pop_WorkOrder_Count.resx">
+      <DependentUpon>Pop_WorkOrder_Count.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3_production\Prod_1-1_WorkOrders.resx">
+      <DependentUpon>Prod_1-1_WorkOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="3_production\Prod_1_WorkOrders.resx">
       <DependentUpon>Prod_1_WorkOrders.cs</DependentUpon>
