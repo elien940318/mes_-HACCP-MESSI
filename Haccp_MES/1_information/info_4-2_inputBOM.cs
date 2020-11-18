@@ -124,7 +124,7 @@ namespace Haccp_MES._1_information
 
                     cmd.Parameters.AddWithValue("@BOM_NO", Convert.ToInt32(cbMatNo.Text));
                     cmd.Parameters.AddWithValue("@BOM_PARENT", Convert.ToInt32(cbProNo.Text));
-                    cmd.Parameters.AddWithValue("@BOM_COUNT", Convert.ToInt32(txtBomCount.Text));
+                    cmd.Parameters.AddWithValue("@BOM_COUNT", Convert.ToDouble(txtBomCount.Text));
 
                     if (cmd.ExecuteNonQuery() == 1)
                     {
@@ -162,7 +162,7 @@ namespace Haccp_MES._1_information
                 {
                     int bpn = Convert.ToInt32(gridSelectBOM.Rows[i].Cells["bom_parent_no"].Value);
                     int bn = Convert.ToInt32(gridSelectBOM.Rows[i].Cells["bom_no"].Value);
-                    int bc = Convert.ToInt32(gridSelectBOM.Rows[i].Cells["bom_count"].Value);
+                    double bc = Convert.ToDouble(gridSelectBOM.Rows[i].Cells["bom_count"].Value);
 
                     string update_query = "UPDATE info_bom SET bom_count = @BOM_COUNT WHERE bom_parent_no = @BOM_PARENT_NO AND bom_no = @BOM_NO;";
 

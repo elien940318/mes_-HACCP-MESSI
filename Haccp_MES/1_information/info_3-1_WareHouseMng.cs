@@ -72,6 +72,22 @@ namespace Haccp_MES._1_information
             conn.Close();
         }
 
+        public void renew()
+        {
+            conn.Open();
+            dtHead.Clear();
+            string warehouseInfoHeadQuery = "SELECT * FROM info_warehouse;";
+            cmd = new MySqlCommand(warehouseInfoHeadQuery, conn);
+
+            adapter = new MySqlDataAdapter(cmd);
+            adapter.Fill(dtHead);
+
+            gridManageInputHead.DataSource = dtHead;
+            lblHeadCount.Text = gridManageInputHead.Rows.Count.ToString();
+
+            conn.Close();
+        }
+
 
 
         private void info_3_WareHouseMng_Load(object sender, EventArgs e)
@@ -141,26 +157,24 @@ namespace Haccp_MES._1_information
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            int i = 0;
+            conn.Open();
             foreach (DataGridViewRow drRow in gridManageInputHead.Rows)
             {
                 bool isChecked = Convert.ToBoolean(drRow.Cells[0].Value);
-
                 if (isChecked)
-                    gridManageInputHead.Rows.Remove(drRow);
-            }
-
-            foreach (DataRow drRow in dtHead.Rows)
-            {
-                if (drRow.RowState == DataRowState.Deleted)
                 {
-                    string deleteQuery = "DELETE FROM info_warehouse WHERE ware_no=@WARE_NO";
-                    conn.Open();
-                    cmd = new MySqlCommand(deleteQuery, conn);
-                    cmd.Parameters.AddWithValue("@WARE_NO", drRow["ware_no", DataRowVersion.Original]);
+                    int wn = Convert.ToInt32(gridManageInputHead.Rows[i].Cells["ware_no"].Value);
+                    string delete_query = "DELETE FROM info_warehouse WHERE ware_no = @WARE_NO;";
+                    cmd = new MySqlCommand(delete_query, conn);
+                    cmd.Parameters.AddWithValue("@WARE_NO", wn);
                     cmd.ExecuteNonQuery();
-                    conn.Close();
                 }
+                i++;
             }
+            conn.Close();
+            MessageBox.Show("삭제완료");
+            renew();
         }
 
         private void gridManageInputHead_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -220,5 +234,6 @@ namespace Haccp_MES._1_information
 
             btnSelect_Click(sender, e);
         }
+
     }
 }

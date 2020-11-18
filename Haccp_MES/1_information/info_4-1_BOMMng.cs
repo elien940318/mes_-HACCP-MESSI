@@ -70,8 +70,8 @@ namespace Haccp_MES._1_information
         {
             conn.Open();
             dtHead.Clear();
-            string warehouseInfoHeadQuery = "SELECT mat_no, mat_name, mat_etc FROM info_material WHERE mat_type = '제품';";
-            cmd = new MySqlCommand(warehouseInfoHeadQuery, conn);
+            string bomInfoHeadQuery = "SELECT mat_no, mat_name, mat_etc FROM info_material WHERE mat_type = '제품';";
+            cmd = new MySqlCommand(bomInfoHeadQuery, conn);
 
             adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dtHead);
@@ -129,10 +129,10 @@ namespace Haccp_MES._1_information
             DataTable dtBody = new DataTable();
             conn.Open();
 
-            string warehouseInfoBodyQuery = "SELECT info_bom.bom_parent_no as 'bom_finish_no', (select mat_name from info_material where mat_no=@BOM_P_NO) as 'mat_finished_name', info_material.mat_name as 'mat_material_name', bom_count, info_material.mat_etc as 'mat_etc'" +
+            string bomInfoBodyQuery = "SELECT info_bom.bom_parent_no as 'bom_finish_no', (select mat_name from info_material where mat_no=@BOM_P_NO) as 'mat_finished_name', info_material.mat_name as 'mat_material_name', bom_count, info_material.mat_etc as 'mat_etc'" +
                                             "FROM (select * from info_bom where bom_parent_no = @BOM_P_NO AND bom_no != @BOM_P_NO) info_bom, info_material " +
                                             "WHERE info_material.mat_no = info_bom.bom_no;";
-            cmd = new MySqlCommand(warehouseInfoBodyQuery, conn);
+            cmd = new MySqlCommand(bomInfoBodyQuery, conn);
             cmd.Parameters.AddWithValue("@BOM_P_NO", bom_no);
             adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dtBody);
