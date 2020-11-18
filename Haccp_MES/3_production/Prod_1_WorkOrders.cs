@@ -26,11 +26,6 @@ namespace Haccp_MES._3_production
 
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
@@ -71,15 +66,16 @@ namespace Haccp_MES._3_production
         }
 
         
-        // 상단 그리드뷰 초기 설정 함수
+       // 상단 그리드뷰 초기 설정 함수
         private void TopGridViewFill()
         {
+  
             conn = new MySqlConnection(DatabaseInfo.DBConnectStr());
             conn.Open();
 
             string qry = "SELECT a.mngodr_no as 'WorkNo', a.mngodr_date as 'WorkDate', a.mat_no as 'Mcode', b.mat_name as 'Mname', b.mat_type as 'Mtype', b.mat_spec as 'Mspec', a.mngodr_count as 'Work_count', a.user_id as 'Manager', a.ware_no as 'WareNo'" +
                          "FROM production_mngodr a, info_material b " +
-                         "WHERE a.mat_no = b.mat_no";
+                         "WHERE a.mat_no = b.mat_no order by a.mngodr_no";
 
             cmd = new MySqlCommand(qry, conn);
             adapter = new MySqlDataAdapter(cmd);
@@ -182,7 +178,7 @@ namespace Haccp_MES._3_production
         }
 
         // 조회
-        private void btnInsert_Click(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
             conn.Open();
 
@@ -201,7 +197,7 @@ namespace Haccp_MES._3_production
             }
             if (cbxWareHouse.Text != "")
             {
-                qry += " AND b.ware_no = " + cbxMatCode.Text + "";
+                qry += " AND a.ware_no = " + cbxWareHouse.Text + "";
             }
             if (wkStartDate.Text != "" || wkEndDate.Text != "")
             {
@@ -234,12 +230,26 @@ namespace Haccp_MES._3_production
                 {
                     ((ComboBox)item).Text = "";
                 }
-                else if (item is DateTimePicker)
-                {
-                    ((DateTimePicker)item).Text = "";
-                }
+                //else if (item is DateTimePicker)
+                //{
+                //    ((DateTimePicker)item).Text = "";
+                //}
             }
 
+            TopGridViewFill();
+        }
+
+        // 등록
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            Prod_1_1_WorkOrders PopUp = new Prod_1_1_WorkOrders();
+            PopUp.Owner = this;
+            PopUp.ShowDialog();
+        }
+
+        // 리셋
+        public void ResetTopGridView()
+        {
             TopGridViewFill();
         }
     }

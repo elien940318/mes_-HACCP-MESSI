@@ -110,5 +110,24 @@ namespace Haccp_MES
             #endregion
         }
 
+        private void pnlMngInput_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlWorkOrder_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlProdRate_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlMngOutput_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
