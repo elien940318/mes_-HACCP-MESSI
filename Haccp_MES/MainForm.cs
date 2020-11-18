@@ -163,8 +163,6 @@ namespace Haccp_MES
                 btn_Work_CMD.ForeColor = System.Drawing.Color.LightGray;
             if (btn_Result_Mng.ForeColor == System.Drawing.Color.Crimson)
                 btn_Result_Mng.ForeColor = System.Drawing.Color.LightGray;
-            if (btn_Time_Trend.ForeColor == System.Drawing.Color.Crimson)
-                btn_Time_Trend.ForeColor = System.Drawing.Color.LightGray;
             #endregion
 
             if (btn.ForeColor == System.Drawing.Color.LightGray)
@@ -479,22 +477,6 @@ namespace Haccp_MES
             {
                 tabBtnActiveOn(tabPerformanceMng);
                 OpenChildForm(new Prod_2_PerformanceMng());
-            }
-        }
-
-        //기관별생산현황 버튼
-        private void btn_Time_Trend_Click(object sender, EventArgs e)
-        {
-            btnColorChange_ProdtMng(btn_Time_Trend);
-
-            if (tabProdTrend.Visible == true)  // 상단 탭버튼이 보인다는건 이미 창이 열려있다는 말
-            {
-                BringToScreen(tabProdTrend, "Prod_3_Production_Trend"); // 새로 만들지 말고 맨앞으로
-            }
-            else
-            {
-                tabBtnActiveOn(tabProdTrend);
-                OpenChildForm(new Prod_3_Production_Trend());
             }
         }
 

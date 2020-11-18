@@ -118,16 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_Time_Trend.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA4AAAAPCAYAAADUFP50AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADBSURBVDhPtZKx
-        EYJAEEUpwRIowQIMiI0ogcACLMHQ0BIswRIoxRIMLsf/mP26jIxCYPBml719t3c3VKWU8zAM1VoQFecX
-        jXo24hR01JaKDX3BldpXUWs1jSEwjVizNiuqxtEsEMdmxaNgg3YiKvddHqIXo5DWfdz+JSpmoUnN1Ghm
-        2lQUnbgLHoGpROdu9h3fonePCfkFc/4pipaP4BA1+CnmYr7L/8QtH8Eu5fwAt8i5jvPOohuXckHkMTje
-        Csr+CWZRyTzbffdPAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="btn_Result_Mng.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
