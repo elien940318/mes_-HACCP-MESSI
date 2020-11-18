@@ -49,16 +49,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(58, 28);
+            this.label1.Location = new System.Drawing.Point(69, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 24);
+            this.label1.Size = new System.Drawing.Size(108, 29);
             this.label1.TabIndex = 98;
             this.label1.Text = "제품리스트";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Haccp_MES.Properties.Resources.list_3x;
-            this.pictureBox2.Location = new System.Drawing.Point(28, 28);
+            this.pictureBox2.Location = new System.Drawing.Point(39, 35);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -67,13 +68,16 @@
             // 
             // btnClose
             // 
+            this.btnClose.BackColor = System.Drawing.Color.Gainsboro;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(645, 252);
+            this.btnClose.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnClose.Location = new System.Drawing.Point(862, 325);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(80, 40);
             this.btnClose.TabIndex = 100;
             this.btnClose.Text = "취소";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // gridSelectInfoMaterial
@@ -98,6 +102,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridSelectInfoMaterial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridSelectInfoMaterial.ColumnHeadersHeight = 29;
             this.gridSelectInfoMaterial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column8,
             this.Column9,
@@ -114,7 +119,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridSelectInfoMaterial.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridSelectInfoMaterial.EnableHeadersVisualStyles = false;
-            this.gridSelectInfoMaterial.Location = new System.Drawing.Point(28, 73);
+            this.gridSelectInfoMaterial.Location = new System.Drawing.Point(39, 91);
+            this.gridSelectInfoMaterial.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridSelectInfoMaterial.MultiSelect = false;
             this.gridSelectInfoMaterial.Name = "gridSelectInfoMaterial";
             this.gridSelectInfoMaterial.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -127,9 +133,10 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridSelectInfoMaterial.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridSelectInfoMaterial.RowHeadersVisible = false;
+            this.gridSelectInfoMaterial.RowHeadersWidth = 51;
             this.gridSelectInfoMaterial.RowTemplate.Height = 23;
             this.gridSelectInfoMaterial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSelectInfoMaterial.Size = new System.Drawing.Size(692, 173);
+            this.gridSelectInfoMaterial.Size = new System.Drawing.Size(903, 226);
             this.gridSelectInfoMaterial.TabIndex = 104;
             this.gridSelectInfoMaterial.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gridSelectInfoMaterial_CellMouseDoubleClick);
             // 
@@ -137,6 +144,7 @@
             // 
             this.Column8.DataPropertyName = "mat_no";
             this.Column8.HeaderText = "품목코드";
+            this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
             // 
@@ -144,6 +152,7 @@
             // 
             this.Column9.DataPropertyName = "mat_name";
             this.Column9.HeaderText = "품목명";
+            this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             // 
@@ -151,6 +160,7 @@
             // 
             this.Column10.DataPropertyName = "mat_type";
             this.Column10.HeaderText = "품목유형";
+            this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
             // 
@@ -158,6 +168,7 @@
             // 
             this.Column11.DataPropertyName = "mat_spec";
             this.Column11.HeaderText = "단위";
+            this.Column11.MinimumWidth = 6;
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
             // 
@@ -165,6 +176,7 @@
             // 
             this.Column12.DataPropertyName = "mat_price";
             this.Column12.HeaderText = "단가";
+            this.Column12.MinimumWidth = 6;
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
             // 
@@ -172,19 +184,21 @@
             // 
             this.Column14.DataPropertyName = "mat_etc";
             this.Column14.HeaderText = "비고";
+            this.Column14.MinimumWidth = 6;
             this.Column14.Name = "Column14";
             this.Column14.ReadOnly = true;
             // 
             // mngmnt_2_2_materialList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 303);
+            this.ClientSize = new System.Drawing.Size(1000, 400);
             this.Controls.Add(this.gridSelectInfoMaterial);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "mngmnt_2_2_materialList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "mngmnt_2_2_materialList";

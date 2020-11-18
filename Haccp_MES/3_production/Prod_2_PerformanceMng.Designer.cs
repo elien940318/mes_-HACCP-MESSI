@@ -85,7 +85,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Haccp_MES.Properties.Resources.browser_4x;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 40);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 40);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
@@ -98,7 +98,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label5.Location = new System.Drawing.Point(72, 36);
+            this.label5.Location = new System.Drawing.Point(68, 30);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(218, 46);
             this.label5.TabIndex = 114;
@@ -109,10 +109,10 @@
             this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnDelete.ForeColor = System.Drawing.Color.Transparent;
-            this.btnDelete.Location = new System.Drawing.Point(997, 45);
+            this.btnDelete.Location = new System.Drawing.Point(965, 35);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(0);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(48, 29);
+            this.btnDelete.Size = new System.Drawing.Size(80, 40);
             this.btnDelete.TabIndex = 119;
             this.btnDelete.Text = "저장";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -137,7 +137,7 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.dtPicker1);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(32, 127);
+            this.groupBox1.Location = new System.Drawing.Point(30, 90);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -310,10 +310,10 @@
             this.btnInsert.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnInsert.ForeColor = System.Drawing.Color.Transparent;
-            this.btnInsert.Location = new System.Drawing.Point(949, 45);
+            this.btnInsert.Location = new System.Drawing.Point(885, 35);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(48, 29);
+            this.btnInsert.Size = new System.Drawing.Size(80, 40);
             this.btnInsert.TabIndex = 117;
             this.btnInsert.Text = "조회";
             this.btnInsert.UseVisualStyleBackColor = false;
@@ -326,10 +326,10 @@
             this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSelect.ForeColor = System.Drawing.Color.Transparent;
             this.btnSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelect.Location = new System.Drawing.Point(919, 45);
+            this.btnSelect.Location = new System.Drawing.Point(845, 35);
             this.btnSelect.Margin = new System.Windows.Forms.Padding(0);
             this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(30, 29);
+            this.btnSelect.Size = new System.Drawing.Size(40, 40);
             this.btnSelect.TabIndex = 116;
             this.btnSelect.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSelect.UseVisualStyleBackColor = false;
@@ -337,7 +337,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Haccp_MES.Properties.Resources.list_2x;
-            this.pictureBox2.Location = new System.Drawing.Point(32, 303);
+            this.pictureBox2.Location = new System.Drawing.Point(30, 266);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(16, 16);
@@ -350,7 +350,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label9.Location = new System.Drawing.Point(57, 298);
+            this.label9.Location = new System.Drawing.Point(52, 260);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(172, 29);
             this.label9.TabIndex = 121;
@@ -405,7 +405,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridManageInputHead.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridManageInputHead.EnableHeadersVisualStyles = false;
-            this.gridManageInputHead.Location = new System.Drawing.Point(31, 332);
+            this.gridManageInputHead.Location = new System.Drawing.Point(30, 290);
             this.gridManageInputHead.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridManageInputHead.MultiSelect = false;
             this.gridManageInputHead.Name = "gridManageInputHead";

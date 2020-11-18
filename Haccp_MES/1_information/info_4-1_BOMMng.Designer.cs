@@ -81,10 +81,10 @@
             this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSelect.ForeColor = System.Drawing.Color.Transparent;
             this.btnSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelect.Location = new System.Drawing.Point(917, 36);
+            this.btnSelect.Location = new System.Drawing.Point(842, 40);
             this.btnSelect.Margin = new System.Windows.Forms.Padding(0);
             this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(27, 29);
+            this.btnSelect.Size = new System.Drawing.Size(40, 40);
             this.btnSelect.TabIndex = 148;
             this.btnSelect.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSelect.UseVisualStyleBackColor = false;
@@ -104,7 +104,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Haccp_MES.Properties.Resources.list_2x;
-            this.pictureBox3.Location = new System.Drawing.Point(30, 473);
+            this.pictureBox3.Location = new System.Drawing.Point(33, 478);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(16, 16);
@@ -178,7 +178,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Haccp_MES.Properties.Resources.list_2x;
-            this.pictureBox2.Location = new System.Drawing.Point(28, 185);
+            this.pictureBox2.Location = new System.Drawing.Point(30, 188);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(16, 16);
@@ -189,7 +189,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Haccp_MES.Properties.Resources.browser_4x;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 40);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 40);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
@@ -202,7 +202,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label5.Location = new System.Drawing.Point(71, 36);
+            this.label5.Location = new System.Drawing.Point(66, 34);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(192, 46);
             this.label5.TabIndex = 139;
@@ -213,10 +213,10 @@
             this.btnInsert.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnInsert.ForeColor = System.Drawing.Color.Transparent;
-            this.btnInsert.Location = new System.Drawing.Point(991, 36);
+            this.btnInsert.Location = new System.Drawing.Point(962, 40);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(48, 29);
+            this.btnInsert.Size = new System.Drawing.Size(80, 40);
             this.btnInsert.TabIndex = 137;
             this.btnInsert.Text = "신규";
             this.btnInsert.UseVisualStyleBackColor = false;
@@ -228,13 +228,12 @@
             this.btnSerch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSerch.ForeColor = System.Drawing.Color.Transparent;
             this.btnSerch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSerch.Location = new System.Drawing.Point(944, 36);
+            this.btnSerch.Location = new System.Drawing.Point(882, 40);
             this.btnSerch.Margin = new System.Windows.Forms.Padding(0);
             this.btnSerch.Name = "btnSerch";
-            this.btnSerch.Size = new System.Drawing.Size(47, 29);
+            this.btnSerch.Size = new System.Drawing.Size(80, 40);
             this.btnSerch.TabIndex = 136;
             this.btnSerch.Text = "조회";
-            this.btnSerch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSerch.UseVisualStyleBackColor = false;
             this.btnSerch.Click += new System.EventHandler(this.btnSerch_Click);
             // 
@@ -309,7 +308,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridManageInputHead.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridManageInputHead.EnableHeadersVisualStyles = false;
-            this.gridManageInputHead.Location = new System.Drawing.Point(28, 212);
+            this.gridManageInputHead.Location = new System.Drawing.Point(30, 212);
             this.gridManageInputHead.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridManageInputHead.MultiSelect = false;
             this.gridManageInputHead.Name = "gridManageInputHead";
@@ -411,7 +410,7 @@
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridBOMinfo.DefaultCellStyle = dataGridViewCellStyle7;
             this.gridBOMinfo.EnableHeadersVisualStyles = false;
-            this.gridBOMinfo.Location = new System.Drawing.Point(28, 502);
+            this.gridBOMinfo.Location = new System.Drawing.Point(30, 502);
             this.gridBOMinfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridBOMinfo.MultiSelect = false;
             this.gridBOMinfo.Name = "gridBOMinfo";

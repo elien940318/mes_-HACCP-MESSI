@@ -49,10 +49,10 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCancel.Location = new System.Drawing.Point(856, 345);
+            this.btnCancel.Location = new System.Drawing.Point(862, 336);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(86, 29);
+            this.btnCancel.Size = new System.Drawing.Size(80, 40);
             this.btnCancel.TabIndex = 0;
             this.btnCancel.Text = "취소";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -71,10 +71,10 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSave.Location = new System.Drawing.Point(763, 345);
+            this.btnSave.Location = new System.Drawing.Point(776, 336);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(86, 29);
+            this.btnSave.Size = new System.Drawing.Size(80, 40);
             this.btnSave.TabIndex = 98;
             this.btnSave.Text = "저장";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -84,10 +84,10 @@
             // 
             this.btnAddRow.BackColor = System.Drawing.Color.Violet;
             this.btnAddRow.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnAddRow.Location = new System.Drawing.Point(870, 50);
+            this.btnAddRow.Location = new System.Drawing.Point(856, 50);
             this.btnAddRow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddRow.Name = "btnAddRow";
-            this.btnAddRow.Size = new System.Drawing.Size(33, 29);
+            this.btnAddRow.Size = new System.Drawing.Size(40, 40);
             this.btnAddRow.TabIndex = 99;
             this.btnAddRow.Text = "+";
             this.btnAddRow.UseVisualStyleBackColor = false;
@@ -97,10 +97,10 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Gold;
             this.btnDelete.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDelete.Location = new System.Drawing.Point(909, 50);
+            this.btnDelete.Location = new System.Drawing.Point(902, 50);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(33, 29);
+            this.btnDelete.Size = new System.Drawing.Size(40, 40);
             this.btnDelete.TabIndex = 102;
             this.btnDelete.Text = "-";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -206,7 +206,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(974, 399);
+            this.ClientSize = new System.Drawing.Size(1000, 400);
             this.Controls.Add(this.gridInsertWarehouseInput);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAddRow);

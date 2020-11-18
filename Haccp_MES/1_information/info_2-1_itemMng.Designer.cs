@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -85,7 +85,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(316, 37);
+            this.label8.Location = new System.Drawing.Point(294, 41);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 15);
             this.label8.TabIndex = 102;
@@ -94,7 +94,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(77, 37);
+            this.label6.Location = new System.Drawing.Point(87, 40);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 15);
             this.label6.TabIndex = 98;
@@ -105,7 +105,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label5.Location = new System.Drawing.Point(71, 36);
+            this.label5.Location = new System.Drawing.Point(68, 30);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(152, 46);
             this.label5.TabIndex = 93;
@@ -116,10 +116,10 @@
             this.btnUpdate.BackColor = System.Drawing.Color.Goldenrod;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnUpdate.ForeColor = System.Drawing.Color.Transparent;
-            this.btnUpdate.Location = new System.Drawing.Point(963, 514);
+            this.btnUpdate.Location = new System.Drawing.Point(961, 493);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(0);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(78, 29);
+            this.btnUpdate.Size = new System.Drawing.Size(80, 40);
             this.btnUpdate.TabIndex = 91;
             this.btnUpdate.Text = "수정";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -130,10 +130,10 @@
             this.btnInsert.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnInsert.ForeColor = System.Drawing.Color.Transparent;
-            this.btnInsert.Location = new System.Drawing.Point(945, 36);
+            this.btnInsert.Location = new System.Drawing.Point(881, 36);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(0);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(48, 29);
+            this.btnInsert.Size = new System.Drawing.Size(80, 40);
             this.btnInsert.TabIndex = 90;
             this.btnInsert.Text = "신규";
             this.btnInsert.UseVisualStyleBackColor = false;
@@ -145,13 +145,12 @@
             this.btnSerch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSerch.ForeColor = System.Drawing.Color.Transparent;
             this.btnSerch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSerch.Location = new System.Drawing.Point(898, 36);
+            this.btnSerch.Location = new System.Drawing.Point(801, 36);
             this.btnSerch.Margin = new System.Windows.Forms.Padding(0);
             this.btnSerch.Name = "btnSerch";
-            this.btnSerch.Size = new System.Drawing.Size(47, 29);
+            this.btnSerch.Size = new System.Drawing.Size(80, 40);
             this.btnSerch.TabIndex = 89;
             this.btnSerch.Text = "조회";
-            this.btnSerch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSerch.UseVisualStyleBackColor = false;
             this.btnSerch.Click += new System.EventHandler(this.btnSerch_Click);
             // 
@@ -201,14 +200,14 @@
             this.gridManageInputHead.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridManageInputHead.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gridManageInputHead.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridManageInputHead.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridManageInputHead.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.gridManageInputHead.ColumnHeadersHeight = 29;
             this.gridManageInputHead.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCheck,
@@ -218,33 +217,33 @@
             this.mat_spec,
             this.mat_price,
             this.mat_etc});
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridManageInputHead.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridManageInputHead.DefaultCellStyle = dataGridViewCellStyle15;
             this.gridManageInputHead.EnableHeadersVisualStyles = false;
-            this.gridManageInputHead.Location = new System.Drawing.Point(28, 212);
+            this.gridManageInputHead.Location = new System.Drawing.Point(30, 212);
             this.gridManageInputHead.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridManageInputHead.MultiSelect = false;
             this.gridManageInputHead.Name = "gridManageInputHead";
             this.gridManageInputHead.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridManageInputHead.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridManageInputHead.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.gridManageInputHead.RowHeadersVisible = false;
             this.gridManageInputHead.RowHeadersWidth = 51;
             this.gridManageInputHead.RowTemplate.Height = 23;
             this.gridManageInputHead.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridManageInputHead.Size = new System.Drawing.Size(1013, 255);
+            this.gridManageInputHead.Size = new System.Drawing.Size(1013, 230);
             this.gridManageInputHead.TabIndex = 81;
             this.gridManageInputHead.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridManageInputHead_CellContentClick);
             // 
@@ -252,11 +251,11 @@
             // 
             this.colCheck.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.colCheck.DataPropertyName = "chkbox";
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle30.NullValue = false;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.colCheck.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle14.NullValue = false;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.colCheck.DefaultCellStyle = dataGridViewCellStyle14;
             this.colCheck.FalseValue = "false";
             this.colCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.colCheck.Frozen = true;
@@ -322,7 +321,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Haccp_MES.Properties.Resources.list_2x;
-            this.pictureBox2.Location = new System.Drawing.Point(28, 185);
+            this.pictureBox2.Location = new System.Drawing.Point(30, 188);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(16, 16);
@@ -333,7 +332,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Haccp_MES.Properties.Resources.browser_4x;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 40);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 40);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
@@ -349,11 +348,11 @@
             this.groupBox1.Controls.Add(this.txtMatName);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Location = new System.Drawing.Point(249, 86);
+            this.groupBox1.Location = new System.Drawing.Point(319, 88);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(793, 83);
+            this.groupBox1.Size = new System.Drawing.Size(723, 83);
             this.groupBox1.TabIndex = 105;
             this.groupBox1.TabStop = false;
             // 
@@ -364,7 +363,7 @@
             this.cbMatNo.FormattingEnabled = true;
             this.cbMatNo.Items.AddRange(new object[] {
             ""});
-            this.cbMatNo.Location = new System.Drawing.Point(150, 33);
+            this.cbMatNo.Location = new System.Drawing.Point(160, 37);
             this.cbMatNo.Name = "cbMatNo";
             this.cbMatNo.Size = new System.Drawing.Size(128, 23);
             this.cbMatNo.TabIndex = 113;
@@ -376,7 +375,7 @@
             this.cbMatType.FormattingEnabled = true;
             this.cbMatType.Items.AddRange(new object[] {
             ""});
-            this.cbMatType.Location = new System.Drawing.Point(620, 33);
+            this.cbMatType.Location = new System.Drawing.Point(566, 37);
             this.cbMatType.Name = "cbMatType";
             this.cbMatType.Size = new System.Drawing.Size(129, 23);
             this.cbMatType.TabIndex = 112;
@@ -384,7 +383,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(547, 37);
+            this.label7.Location = new System.Drawing.Point(493, 41);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 15);
             this.label7.TabIndex = 107;
@@ -392,7 +391,7 @@
             // 
             // txtMatName
             // 
-            this.txtMatName.Location = new System.Drawing.Point(374, 32);
+            this.txtMatName.Location = new System.Drawing.Point(352, 35);
             this.txtMatName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMatName.Name = "txtMatName";
             this.txtMatName.Size = new System.Drawing.Size(135, 25);
@@ -403,10 +402,10 @@
             this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnDelete.ForeColor = System.Drawing.Color.Transparent;
-            this.btnDelete.Location = new System.Drawing.Point(993, 36);
+            this.btnDelete.Location = new System.Drawing.Point(961, 36);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(0);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(48, 29);
+            this.btnDelete.Size = new System.Drawing.Size(80, 40);
             this.btnDelete.TabIndex = 106;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -415,7 +414,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Haccp_MES.Properties.Resources.list_2x;
-            this.pictureBox3.Location = new System.Drawing.Point(30, 517);
+            this.pictureBox3.Location = new System.Drawing.Point(30, 493);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(16, 16);
@@ -428,7 +427,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label2.Location = new System.Drawing.Point(55, 512);
+            this.label2.Location = new System.Drawing.Point(55, 488);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 29);
             this.label2.TabIndex = 107;
@@ -455,7 +454,7 @@
             this.tblLyoutPnl.Controls.Add(this.label22, 0, 2);
             this.tblLyoutPnl.Controls.Add(this.label25, 2, 1);
             this.tblLyoutPnl.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.tblLyoutPnl.Location = new System.Drawing.Point(30, 547);
+            this.tblLyoutPnl.Location = new System.Drawing.Point(30, 537);
             this.tblLyoutPnl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tblLyoutPnl.Name = "tblLyoutPnl";
             this.tblLyoutPnl.RowCount = 3;
@@ -612,7 +611,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.label9.Location = new System.Drawing.Point(59, 179);
+            this.label9.Location = new System.Drawing.Point(52, 183);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(89, 29);
             this.label9.TabIndex = 130;
@@ -626,10 +625,10 @@
             this.btnSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSelect.ForeColor = System.Drawing.Color.Transparent;
             this.btnSelect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelect.Location = new System.Drawing.Point(871, 36);
+            this.btnSelect.Location = new System.Drawing.Point(761, 36);
             this.btnSelect.Margin = new System.Windows.Forms.Padding(0);
             this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(27, 29);
+            this.btnSelect.Size = new System.Drawing.Size(40, 40);
             this.btnSelect.TabIndex = 131;
             this.btnSelect.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSelect.UseVisualStyleBackColor = false;
