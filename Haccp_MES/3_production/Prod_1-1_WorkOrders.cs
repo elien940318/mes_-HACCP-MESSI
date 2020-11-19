@@ -39,7 +39,7 @@ namespace Haccp_MES._3_production
             conn.Open();
 
             #region 품목코드
-            cmd = new MySqlCommand("select mat_no from info_material where mat_type = '제품'", conn);
+            cmd = new MySqlCommand("SELECT mat_no FROM info_material WHERE mat_type = '제품' AND mat_name NOT LIKE '%Box'", conn);
             adapter = new MySqlDataAdapter(cmd);
             dt = new DataTable();
             adapter.Fill(dt);
@@ -54,7 +54,7 @@ namespace Haccp_MES._3_production
             #region 창고코드
             dt.Rows.Clear(); // dt에 있는 기존행 삭제
 
-            cmd = new MySqlCommand("select ware_no from info_warehouse", conn);
+            cmd = new MySqlCommand("SELECT ware_no FROM info_warehouse WHERE ware_type='검수'", conn);
             adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dt);
 
