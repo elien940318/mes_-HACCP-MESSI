@@ -79,7 +79,7 @@ namespace Haccp_MES._2_management
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             conn.Open();
-            string[] updateDatas = new string[3] { txt_output_count.Text, txt_output_admin.Text, txt_output_etc.Text };
+            string[] updateDatas = new string[2] { txt_output_count.Text, txt_output_etc.Text };
             var output_idx = Convert.ToInt32(gridManageoutputHead.CurrentRow.Cells[1].Value);
 
             // 수정 사항 중, 수량값이 변화히면? -> 그에 따라 output_totprc 값도 변화해야한다.
@@ -89,12 +89,11 @@ namespace Haccp_MES._2_management
                 "UPDATE manage_curmat SET curmat_count = curmat_count + (SELECT output_count FROM manage_output WHERE output_idx=@OUTPUT_IDX) + @OUTPUT_COUNT " +
                 "WHERE ware_no = (SELECT ware_no FROM manage_output WHERE output_idx=@OUTPUT_IDX) AND mat_no = (SELECT mat_no FROM manage_output WHERE output_idx=@OUTPUT_IDX); " +
                 "UPDATE manage_output " +
-                "SET output_count=@OUTPUT_COUNT, output_admin=@OUTPUT_ADMIN, output_etc=@OUTPUT_ETC " +
+                "SET output_count=@OUTPUT_COUNT,  output_etc=@OUTPUT_ETC " +
                 "WHERE output_idx=@OUTPUT_IDX;";
             cmd = new MySqlCommand(UpdateQuery, conn);
             cmd.Parameters.AddWithValue("@OUTPUT_COUNT", Convert.ToInt32(updateDatas[0]));
-            cmd.Parameters.AddWithValue("@OUTPUT_ADMIN", updateDatas[1]);
-            cmd.Parameters.AddWithValue("@OUTPUT_ETC", updateDatas[2]);
+            cmd.Parameters.AddWithValue("@OUTPUT_ETC", updateDatas[1]);
             cmd.Parameters.AddWithValue("@OUTPUT_IDX", output_idx);
 
             if (cmd.ExecuteNonQuery() == 0)

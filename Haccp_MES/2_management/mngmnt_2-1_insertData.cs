@@ -102,7 +102,7 @@ namespace Haccp_MES._2_management
                 row["output_count"] = 0;
                 row["ware_name"] = "";
                 row["com_name"] = "";
-                row["output_admin"] = "";
+                row["output_admin"] = MainInstance.Instance.Username;
                 row["output_etc"] = "";
                 dt.Rows.Add(row);
 

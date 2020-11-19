@@ -34,14 +34,13 @@
             this.lblID = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnRegister = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(91, 154);
+            this.txtPassword.Location = new System.Drawing.Point(23, 154);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(119, 21);
@@ -49,7 +48,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(91, 111);
+            this.txtID.Location = new System.Drawing.Point(23, 111);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(119, 21);
             this.txtID.TabIndex = 7;
@@ -57,20 +56,20 @@
             // lblPW
             // 
             this.lblPW.AutoSize = true;
-            this.lblPW.Font = new System.Drawing.Font("휴먼둥근헤드라인", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblPW.Location = new System.Drawing.Point(38, 153);
+            this.lblPW.Font = new System.Drawing.Font("휴먼둥근헤드라인", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblPW.Location = new System.Drawing.Point(21, 140);
             this.lblPW.Name = "lblPW";
-            this.lblPW.Size = new System.Drawing.Size(47, 22);
+            this.lblPW.Size = new System.Drawing.Size(76, 11);
             this.lblPW.TabIndex = 6;
-            this.lblPW.Text = "PW";
+            this.lblPW.Text = "PASSWORD";
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("휴먼둥근헤드라인", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblID.Location = new System.Drawing.Point(49, 110);
+            this.lblID.Font = new System.Drawing.Font("휴먼둥근헤드라인", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblID.Location = new System.Drawing.Point(21, 97);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(35, 22);
+            this.lblID.Size = new System.Drawing.Size(18, 11);
             this.lblID.TabIndex = 5;
             this.lblID.Text = "ID";
             // 
@@ -78,7 +77,7 @@
             // 
             this.btnLogin.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnLogin.Font = new System.Drawing.Font("나눔고딕", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnLogin.Location = new System.Drawing.Point(231, 106);
+            this.btnLogin.Location = new System.Drawing.Point(165, 109);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 10;
@@ -90,7 +89,7 @@
             // 
             this.btnClose.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.btnClose.Font = new System.Drawing.Font("나눔고딕", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnClose.Location = new System.Drawing.Point(231, 164);
+            this.btnClose.Location = new System.Drawing.Point(165, 152);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 11;
@@ -98,25 +97,13 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnRegister
-            // 
-            this.btnRegister.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnRegister.Font = new System.Drawing.Font("나눔고딕", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnRegister.Location = new System.Drawing.Point(231, 135);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(75, 23);
-            this.btnRegister.TabIndex = 14;
-            this.btnRegister.Text = "register";
-            this.btnRegister.UseVisualStyleBackColor = false;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.pictureBox1.Image = global::Haccp_MES.Properties.Resources.HACCP_MESSI_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(53, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(23, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(253, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(217, 80);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -125,9 +112,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 210);
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.ClientSize = new System.Drawing.Size(267, 192);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
@@ -151,7 +138,6 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
