@@ -104,7 +104,7 @@ namespace Haccp_MES._2_management
                 row["input_inspec"] = "";
                 row["ware_name"] = "";
                 row["com_name"] = "";
-                row["input_admin"] = "";
+                row["input_admin"] = MainInstance.Instance.Username;
                 row["input_etc"] = "";
                 dt.Rows.Add(row);
 
@@ -153,5 +153,9 @@ namespace Haccp_MES._2_management
             this.Close();
         }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -29,11 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblInputCount = new System.Windows.Forms.Label();
@@ -51,20 +55,21 @@
             this.lblOutputCount = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pnlMngInput = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pnlWorkOrder = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pnlProdRate = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.pnlMngOutput = new System.Windows.Forms.Panel();
             this.chartProductionCapacity = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartProductionRate = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.ChartProductionErr = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pnlProdRate = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.pnlMngOutput = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pnlWorkOrder = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pnlMngInput = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -73,12 +78,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.pnlMngInput.SuspendLayout();
-            this.pnlWorkOrder.SuspendLayout();
-            this.pnlProdRate.SuspendLayout();
-            this.pnlMngOutput.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartProductionCapacity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartProductionRate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartProductionErr)).BeginInit();
+            this.pnlProdRate.SuspendLayout();
+            this.pnlMngOutput.SuspendLayout();
+            this.pnlWorkOrder.SuspendLayout();
+            this.pnlMngInput.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -266,75 +272,76 @@
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
             // 
-            // pnlMngInput
+            // chartProductionCapacity
             // 
-            this.pnlMngInput.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pnlMngInput.BackColor = System.Drawing.Color.White;
-            this.pnlMngInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlMngInput.Controls.Add(this.label10);
-            this.pnlMngInput.Controls.Add(this.label9);
-            this.pnlMngInput.Location = new System.Drawing.Point(20, 43);
-            this.pnlMngInput.Name = "pnlMngInput";
-            this.pnlMngInput.Size = new System.Drawing.Size(223, 24);
-            this.pnlMngInput.TabIndex = 6;
-
+            this.chartProductionCapacity.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.chartProductionCapacity.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.chartProductionCapacity.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea1.Name = "ChartArea1";
+            this.chartProductionCapacity.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartProductionCapacity.Legends.Add(legend1);
+            this.chartProductionCapacity.Location = new System.Drawing.Point(20, 99);
+            this.chartProductionCapacity.Name = "chartProductionCapacity";
+            this.chartProductionCapacity.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "생산량";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "불량품";
+            series2.XValueMember = "date";
+            series2.YValueMembers = "prodrecod_err";
+            this.chartProductionCapacity.Series.Add(series1);
+            this.chartProductionCapacity.Series.Add(series2);
+            this.chartProductionCapacity.Size = new System.Drawing.Size(928, 204);
+            this.chartProductionCapacity.TabIndex = 12;
+            this.chartProductionCapacity.Text = "생산량";
             // 
-            // label10
+            // chartProductionRate
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label10.Location = new System.Drawing.Point(198, 6);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(18, 12);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "▶";
+            this.chartProductionRate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            chartArea2.Name = "ChartArea1";
+            this.chartProductionRate.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartProductionRate.Legends.Add(legend2);
+            this.chartProductionRate.Location = new System.Drawing.Point(680, 334);
+            this.chartProductionRate.Name = "chartProductionRate";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series3.IsValueShownAsLabel = true;
+            series3.Label = "#PERCENT{P}";
+            series3.Legend = "Legend1";
+            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series3.Name = "Series1";
+            this.chartProductionRate.Series.Add(series3);
+            this.chartProductionRate.Size = new System.Drawing.Size(268, 220);
+            this.chartProductionRate.TabIndex = 14;
+            this.chartProductionRate.Text = "생산률";
             // 
-            // label9
+            // ChartProductionErr
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label9.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label9.Location = new System.Drawing.Point(11, 6);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 12);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "View Details";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(198, 6);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(18, 12);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "▶";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label12.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label12.Location = new System.Drawing.Point(11, 6);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 12);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "View Details";
-            // 
-            // pnlWorkOrder
-            // 
-            this.pnlWorkOrder.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pnlWorkOrder.BackColor = System.Drawing.Color.White;
-            this.pnlWorkOrder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlWorkOrder.Controls.Add(this.label11);
-            this.pnlWorkOrder.Controls.Add(this.label12);
-            this.pnlWorkOrder.Location = new System.Drawing.Point(255, 42);
-            this.pnlWorkOrder.Name = "pnlWorkOrder";
-            this.pnlWorkOrder.Size = new System.Drawing.Size(222, 24);
-            this.pnlWorkOrder.TabIndex = 9;
-
+            chartArea3.BorderWidth = 0;
+            chartArea3.Name = "ChartArea1";
+            this.ChartProductionErr.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.ChartProductionErr.Legends.Add(legend3);
+            this.ChartProductionErr.Location = new System.Drawing.Point(20, 334);
+            this.ChartProductionErr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ChartProductionErr.Name = "ChartProductionErr";
+            this.ChartProductionErr.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.IsValueShownAsLabel = true;
+            series4.Label = "#VAL";
+            series4.Legend = "Legend1";
+            series4.MarkerBorderWidth = 0;
+            series4.Name = "불량품";
+            series4.YValuesPerPoint = 2;
+            this.ChartProductionErr.Series.Add(series4);
+            this.ChartProductionErr.Size = new System.Drawing.Size(638, 220);
+            this.ChartProductionErr.TabIndex = 16;
+            this.ChartProductionErr.Text = "chart2";
             // 
             // label13
             // 
@@ -347,17 +354,6 @@
             this.label13.TabIndex = 8;
             this.label13.Text = "▶";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label14.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label14.Location = new System.Drawing.Point(11, 4);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(87, 12);
-            this.label14.TabIndex = 7;
-            this.label14.Text = "View Details";
-            // 
             // pnlProdRate
             // 
             this.pnlProdRate.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -369,18 +365,6 @@
             this.pnlProdRate.Name = "pnlProdRate";
             this.pnlProdRate.Size = new System.Drawing.Size(223, 24);
             this.pnlProdRate.TabIndex = 10;
-
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label15.Location = new System.Drawing.Point(198, 6);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(18, 12);
-            this.label15.TabIndex = 8;
-            this.label15.Text = "▶";
             // 
             // label16
             // 
@@ -393,6 +377,17 @@
             this.label16.TabIndex = 7;
             this.label16.Text = "View Details";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label15.Location = new System.Drawing.Point(198, 6);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(18, 12);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "▶";
+            // 
             // pnlMngOutput
             // 
             this.pnlMngOutput.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -404,46 +399,85 @@
             this.pnlMngOutput.Name = "pnlMngOutput";
             this.pnlMngOutput.Size = new System.Drawing.Size(223, 24);
             this.pnlMngOutput.TabIndex = 11;
-
             // 
-            // chartProductionCapacity
+            // label14
             // 
-            this.chartProductionCapacity.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.chartProductionCapacity.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.chartProductionCapacity.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea3.Name = "ChartArea1";
-            this.chartProductionCapacity.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartProductionCapacity.Legends.Add(legend3);
-            this.chartProductionCapacity.Location = new System.Drawing.Point(20, 105);
-            this.chartProductionCapacity.Name = "chartProductionCapacity";
-            this.chartProductionCapacity.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "생산량";
-            this.chartProductionCapacity.Series.Add(series3);
-            this.chartProductionCapacity.Size = new System.Drawing.Size(646, 204);
-            this.chartProductionCapacity.TabIndex = 12;
-            this.chartProductionCapacity.Text = "생산량";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label14.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label14.Location = new System.Drawing.Point(11, 4);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(87, 12);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "View Details";
             // 
-            // chartProductionRate
+            // label12
             // 
-            this.chartProductionRate.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            chartArea4.Name = "ChartArea1";
-            this.chartProductionRate.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartProductionRate.Legends.Add(legend4);
-            this.chartProductionRate.Location = new System.Drawing.Point(684, 105);
-            this.chartProductionRate.Name = "chartProductionRate";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series4.Legend = "Legend1";
-            series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series4.Name = "Series1";
-            this.chartProductionRate.Series.Add(series4);
-            this.chartProductionRate.Size = new System.Drawing.Size(262, 204);
-            this.chartProductionRate.TabIndex = 14;
-            this.chartProductionRate.Text = "생산률";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label12.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label12.Location = new System.Drawing.Point(11, 6);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(87, 12);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "View Details";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label11.Location = new System.Drawing.Point(198, 6);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(18, 12);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "▶";
+            // 
+            // pnlWorkOrder
+            // 
+            this.pnlWorkOrder.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pnlWorkOrder.BackColor = System.Drawing.Color.White;
+            this.pnlWorkOrder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlWorkOrder.Controls.Add(this.label11);
+            this.pnlWorkOrder.Controls.Add(this.label12);
+            this.pnlWorkOrder.Location = new System.Drawing.Point(255, 42);
+            this.pnlWorkOrder.Name = "pnlWorkOrder";
+            this.pnlWorkOrder.Size = new System.Drawing.Size(222, 24);
+            this.pnlWorkOrder.TabIndex = 9;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label9.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label9.Location = new System.Drawing.Point(11, 6);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 12);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "View Details";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label10.Location = new System.Drawing.Point(198, 6);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(18, 12);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "▶";
+            // 
+            // pnlMngInput
+            // 
+            this.pnlMngInput.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pnlMngInput.BackColor = System.Drawing.Color.White;
+            this.pnlMngInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMngInput.Controls.Add(this.label10);
+            this.pnlMngInput.Controls.Add(this.label9);
+            this.pnlMngInput.Location = new System.Drawing.Point(20, 43);
+            this.pnlMngInput.Name = "pnlMngInput";
+            this.pnlMngInput.Size = new System.Drawing.Size(223, 24);
+            this.pnlMngInput.TabIndex = 6;
             // 
             // Home
             // 
@@ -451,6 +485,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(965, 610);
+            this.Controls.Add(this.ChartProductionErr);
             this.Controls.Add(this.chartProductionRate);
             this.Controls.Add(this.chartProductionCapacity);
             this.Controls.Add(this.pnlMngOutput);
@@ -477,16 +512,17 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.pnlMngInput.ResumeLayout(false);
-            this.pnlMngInput.PerformLayout();
-            this.pnlWorkOrder.ResumeLayout(false);
-            this.pnlWorkOrder.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartProductionCapacity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartProductionRate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartProductionErr)).EndInit();
             this.pnlProdRate.ResumeLayout(false);
             this.pnlProdRate.PerformLayout();
             this.pnlMngOutput.ResumeLayout(false);
             this.pnlMngOutput.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartProductionCapacity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartProductionRate)).EndInit();
+            this.pnlWorkOrder.ResumeLayout(false);
+            this.pnlWorkOrder.PerformLayout();
+            this.pnlMngInput.ResumeLayout(false);
+            this.pnlMngInput.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -509,19 +545,20 @@
         private System.Windows.Forms.Label lblOutputCount;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Panel pnlMngInput;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel pnlWorkOrder;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Panel pnlProdRate;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel pnlMngOutput;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartProductionCapacity;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartProductionRate;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ChartProductionErr;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel pnlProdRate;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel pnlMngOutput;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel pnlWorkOrder;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel pnlMngInput;
     }
 }

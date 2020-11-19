@@ -103,7 +103,7 @@ namespace Haccp_MES._2_management
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             conn.Open();
-            string[] updateDatas = new string[4] {txt_input_inspec.Text, txt_input_count.Text, txt_input_admin.Text, txt_input_etc.Text};
+            string[] updateDatas = new string[3] {txt_input_inspec.Text, txt_input_count.Text, txt_input_etc.Text};
             var input_idx = Convert.ToInt32(gridManageInputHead.CurrentRow.Cells[1].Value);
 
             // 수정 사항 중, 수량값이 변화히면? -> 그에 따라 input_totprc 값도 변화해야한다.
@@ -114,14 +114,13 @@ namespace Haccp_MES._2_management
                 "UPDATE manage_curmat SET curmat_count = curmat_count - (SELECT input_count FROM manage_input WHERE input_idx=@INPUT_IDX) + @INPUT_COUNT " +
                 "WHERE ware_no = (SELECT ware_no FROM manage_input WHERE input_idx=@INPUT_IDX) AND mat_no = (SELECT mat_no FROM manage_input WHERE input_idx=@INPUT_IDX); " +
                 "UPDATE manage_input " +
-                "SET input_inspec=@INPUT_INSPEC, input_count=@INPUT_COUNT, input_admin=@INPUT_ADMIN, input_etc=@INPUT_ETC " +
+                "SET input_inspec=@INPUT_INSPEC, input_count=@INPUT_COUNT, input_etc=@INPUT_ETC " +
                 "WHERE input_idx=@INPUT_IDX;";
             cmd = new MySqlCommand(UpdateQuery, conn);
 
             cmd.Parameters.AddWithValue("@INPUT_INSPEC", updateDatas[0]);
             cmd.Parameters.AddWithValue("@INPUT_COUNT", Convert.ToInt32(updateDatas[1]));
-            cmd.Parameters.AddWithValue("@INPUT_ADMIN", updateDatas[2]);
-            cmd.Parameters.AddWithValue("@INPUT_ETC", updateDatas[3]);
+            cmd.Parameters.AddWithValue("@INPUT_ETC", updateDatas[2]);
             cmd.Parameters.AddWithValue("@INPUT_IDX", input_idx);
 
             if(cmd.ExecuteNonQuery() == 0) 
@@ -176,7 +175,7 @@ namespace Haccp_MES._2_management
                 CheckBox cb = new CheckBox();
                 cb.Size = new Size(nChkBoxWidth, nChkBoxHeight);
                 cb.Location = pt;
-                cb.CheckedChanged += new EventHandler(gvSheetListCheckBox_CheckedChanged);
+                cb.CheckedChanged += new System.EventHandler(gvSheetListCheckBox_CheckedChanged);
                 cb.FlatStyle = FlatStyle.Flat;
                 
                 ((DataGridView)sender).Controls.Add(cb);
