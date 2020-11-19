@@ -28,8 +28,26 @@ namespace Haccp_MES
         {
             conn = new MySqlConnection(DatabaseInfo.DBConnectStr());
 
-            Label[] lbllist = new Label[4]{ lblInputCount, lblOrderCount, lblRateCount, lblOutputCount};
+            Label[] lbllist = new Label[4]{ lblInputCount, lblRateCount, lblOrderCount, lblOutputCount };
 
+            conn.Open();
+            string getTodayWork =
+                "SELECT COUNT(*) FROM manage_input WHERE DATE_FORMAT(input_date, '%Y-%m-%d')= CURDATE() " +
+                "UNION ALL " +
+                "SELECT COUNT(*) FROM manage_output WHERE DATE_FORMAT(output_date, '%Y-%m-%d')= CURDATE() " +
+                "UNION ALL " +
+                "SELECT COUNT(*) FROM production_mngodr WHERE DATE_FORMAT(mngodr_date, '%Y-%m-%d')= CURDATE() " +
+                "UNION ALL " +
+                "SELECT COUNT(*) FROM production_prodrecod WHERE DATE_FORMAT(prodrecod_date, '%Y-%m-%d')= CURDATE();";
+
+            cmd = new MySqlCommand(getTodayWork, conn);
+            adapter = new MySqlDataAdapter(cmd);
+            dt = new DataTable();
+            adapter.Fill(dt);
+            conn.Close();
+            for (int i = 0; i < lbllist.Length; i++)
+                lbllist[i].Text = dt.Rows[i][0].ToString();
+            
 
 
             #region Graph
