@@ -28,7 +28,7 @@
     <ProductName>haccp_messi</ProductName>
     <PublisherName>스마트팩토리</PublisherName>
     <SuiteName>MES</SuiteName>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
