@@ -23,6 +23,7 @@ namespace Haccp_MES._3_production
         public Prod_1_1_WorkOrders()
         {
             InitializeComponent();
+            wkDate.MaxDate = DateTime.Now;
         }
 
         private void Prod_1_1_WorkOrders_Load(object sender, EventArgs e)
@@ -54,7 +55,7 @@ namespace Haccp_MES._3_production
             #region 창고코드
             dt.Rows.Clear(); // dt에 있는 기존행 삭제
 
-            cmd = new MySqlCommand("select ware_no from info_warehouse", conn);
+            cmd = new MySqlCommand("select ware_no from info_warehouse where ware_name = '검사대기창고'", conn);
             adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dt);
 

@@ -41,7 +41,7 @@ namespace Haccp_MES._3_production
             conn.Open();
 
             #region 작업실적코드
-            cmd = new MySqlCommand("SELECT prodrecod_no FROM production_prodrecod", conn);
+            cmd = new MySqlCommand("SELECT prodrecod_no FROM production_prodrecod order by prodrecod_no", conn);
             adapter = new MySqlDataAdapter(cmd);
             dt = new DataTable();
 
@@ -57,7 +57,7 @@ namespace Haccp_MES._3_production
             #region 작업지시번호
             dt.Rows.Clear(); // dt에 있는 저장된 행들(데이터) 
 
-            cmd = new MySqlCommand("select mngodr_no from production_mngodr", conn);
+            cmd = new MySqlCommand("select mngodr_no from production_mngodr order by mngodr_no", conn);
             adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dt);
 
@@ -71,7 +71,7 @@ namespace Haccp_MES._3_production
             #region 품목코드
             dt.Rows.Clear(); // dt에 있는 기존행 삭제
 
-            cmd = new MySqlCommand("select mat_no from info_material", conn);
+            cmd = new MySqlCommand("select mat_no from info_material order by mat_no", conn);
             adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dt);
 
@@ -85,7 +85,7 @@ namespace Haccp_MES._3_production
             #region 창고코드
             dt.Rows.Clear(); // dt에 있는 기존행 삭제
 
-            cmd = new MySqlCommand("select ware_no from info_warehouse", conn);
+            cmd = new MySqlCommand("select ware_no from info_warehouse order by ware_no", conn);
             // cmd = new MySqlCommand("select ware_no from info_warehouse where ware_name like '" + "%대기%'", conn);
             adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dt);
@@ -101,14 +101,14 @@ namespace Haccp_MES._3_production
         }
 
         // 그리드뷰 초기 설정
-        private void GridViewFill()
+        public void GridViewFill()
         {
             conn = new MySqlConnection(DatabaseInfo.DBConnectStr());
             conn.Open();
 
             string qry = "select a.prodrecod_no as 'WkRecNo', a.mngodr_no as 'WorkNo', a.prodrecod_date as 'RecDate', c.mat_name as 'Mname', c.mat_spec as 'Mspec', b.mngodr_count as 'OrderQTY', a.prodrecod_good as 'GoodItem', a.prodrecod_err as 'badITEM', a.ware_no as 'WareHS' " +
                          "from production_prodrecod a, production_mngodr b, info_material c " +
-                         "where a.mngodr_no = b.mngodr_no AND b.mat_no = c.mat_no";
+                         "where a.mngodr_no = b.mngodr_no AND b.mat_no = c.mat_no order by a.prodrecod_no";
 
             cmd = new MySqlCommand(qry, conn);
             adapter = new MySqlDataAdapter(cmd);
@@ -220,6 +220,37 @@ namespace Haccp_MES._3_production
             gridManageInputHead.DataSource = dt;
 
             conn.Close(); // 일단 불러왔으니 DB는 닫자
+        }
+
+        // 등록버튼
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            Prod_2_1_PoPerfom p21p = new Prod_2_1_PoPerfom();
+            p21p.Owner = this;
+            p21p.ShowDialog();
+            p21p.Dispose();
+        }
+
+        //삭제버튼
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string selectedItem = gridManageInputHead.CurrentRow.Cells[1].Value.ToString();
+            string qry = "delete from production_prodrecod where prodrecod_no = '" + selectedItem + "'";
+            conn.Open();
+            
+            cmd = new MySqlCommand(qry, conn);
+            if (cmd.ExecuteNonQuery() != -1)
+            {
+                MessageBox.Show("정상적으로 삭제되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("삭제에 실패했습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            conn.Close();
+            
+            //새로고침
+            GridViewFill();
         }
     }
 }
