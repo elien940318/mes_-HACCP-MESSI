@@ -56,7 +56,7 @@ namespace Haccp_MES._1_information
 
                 if (gridInsertMangeInput.Rows[i].Cells["com_type"].Value != null && gridInsertMangeInput.Rows[i].Cells["com_name"].Value != null)
                 {
-                    string input_query = "INSERT INTO info_material (com_type, com_name, com_licenseno, com_phoneno, com_rep_name) VALUES (@COM_TYPE, @COM_NAME, @COM_LICENSENO, @COM_PHONENO, @COM_REP_NAME);";
+                    string input_query = "INSERT INTO info_company (com_type, com_name, com_licenseno, com_phoneno, com_rep_name) VALUES (@COM_TYPE, @COM_NAME, @COM_LICENSENO, @COM_PHONENO, @COM_REP_NAME);";
 
                     cmd = new MySqlCommand(input_query, conn);
 
@@ -74,7 +74,7 @@ namespace Haccp_MES._1_information
 
                     if (gridInsertMangeInput.Rows[i].Cells["com_phoneno"].Value != null)
                     {
-                        cmd.Parameters.AddWithValue("@COM_PHONENO", Convert.ToInt32(gridInsertMangeInput.Rows[i].Cells["com_phoneno"].Value));
+                        cmd.Parameters.AddWithValue("@COM_PHONENO", Convert.ToString(gridInsertMangeInput.Rows[i].Cells["com_phoneno"].Value));
                     }
                     else
                     {

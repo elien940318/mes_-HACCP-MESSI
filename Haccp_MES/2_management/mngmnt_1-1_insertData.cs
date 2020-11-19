@@ -153,5 +153,9 @@ namespace Haccp_MES._2_management
             this.Close();
         }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
