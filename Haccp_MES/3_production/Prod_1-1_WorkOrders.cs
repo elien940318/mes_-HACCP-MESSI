@@ -29,6 +29,7 @@ namespace Haccp_MES._3_production
         private void Prod_1_1_WorkOrders_Load(object sender, EventArgs e)
         {
             AddToComboBox();
+            txtAdmin.Text = MainInstance.Instance.Username;
         }
 
         // 콤보박스 초기화
@@ -40,7 +41,7 @@ namespace Haccp_MES._3_production
             conn.Open();
 
             #region 품목코드
-            cmd = new MySqlCommand("select mat_no from info_material where mat_type = '제품'", conn);
+            cmd = new MySqlCommand("select mat_no from info_material where mat_type = '제품' AND mat_name NOT LIKE '%Box'", conn);
             adapter = new MySqlDataAdapter(cmd);
             dt = new DataTable();
             adapter.Fill(dt);
@@ -55,7 +56,7 @@ namespace Haccp_MES._3_production
             #region 창고코드
             dt.Rows.Clear(); // dt에 있는 기존행 삭제
 
-            cmd = new MySqlCommand("select ware_no from info_warehouse where ware_name = '검사대기창고'", conn);
+            cmd = new MySqlCommand("select ware_no from info_warehouse where ware_type = '검수'", conn);
             adapter = new MySqlDataAdapter(cmd);
             adapter.Fill(dt);
 

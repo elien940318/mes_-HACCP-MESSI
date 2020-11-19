@@ -178,6 +178,7 @@
             this.txtAdmin.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtAdmin.Location = new System.Drawing.Point(290, 48);
             this.txtAdmin.Name = "txtAdmin";
+            this.txtAdmin.ReadOnly = true;
             this.txtAdmin.Size = new System.Drawing.Size(109, 21);
             this.txtAdmin.TabIndex = 110;
             // 
