@@ -36,6 +36,9 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblInputCount = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,6 +69,7 @@
             this.pnlMngOutput = new System.Windows.Forms.Panel();
             this.chartProductionCapacity = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartProductionRate = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.ChartProductionErr = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -80,6 +84,7 @@
             this.pnlMngOutput.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartProductionCapacity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartProductionRate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartProductionErr)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -424,7 +429,7 @@
             this.chartProductionCapacity.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartProductionCapacity.Legends.Add(legend1);
-            this.chartProductionCapacity.Location = new System.Drawing.Point(12, 470);
+            this.chartProductionCapacity.Location = new System.Drawing.Point(23, 141);
             this.chartProductionCapacity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chartProductionCapacity.Name = "chartProductionCapacity";
             this.chartProductionCapacity.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -438,7 +443,7 @@
             series2.YValueMembers = "prodrecod_err";
             this.chartProductionCapacity.Series.Add(series1);
             this.chartProductionCapacity.Series.Add(series2);
-            this.chartProductionCapacity.Size = new System.Drawing.Size(1069, 255);
+            this.chartProductionCapacity.Size = new System.Drawing.Size(1061, 255);
             this.chartProductionCapacity.TabIndex = 12;
             this.chartProductionCapacity.Text = "생산량";
             // 
@@ -449,18 +454,43 @@
             this.chartProductionRate.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chartProductionRate.Legends.Add(legend2);
-            this.chartProductionRate.Location = new System.Drawing.Point(775, 181);
+            this.chartProductionRate.Location = new System.Drawing.Point(778, 450);
             this.chartProductionRate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chartProductionRate.Name = "chartProductionRate";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series3.IsValueShownAsLabel = true;
+            series3.Label = "#PERCENT{P}";
             series3.Legend = "Legend1";
             series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
             series3.Name = "Series1";
             this.chartProductionRate.Series.Add(series3);
-            this.chartProductionRate.Size = new System.Drawing.Size(306, 255);
+            this.chartProductionRate.Size = new System.Drawing.Size(306, 275);
             this.chartProductionRate.TabIndex = 14;
             this.chartProductionRate.Text = "생산률";
+            // 
+            // ChartProductionErr
+            // 
+            chartArea3.BorderWidth = 0;
+            chartArea3.Name = "ChartArea1";
+            this.ChartProductionErr.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.ChartProductionErr.Legends.Add(legend3);
+            this.ChartProductionErr.Location = new System.Drawing.Point(32, 450);
+            this.ChartProductionErr.Name = "ChartProductionErr";
+            this.ChartProductionErr.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.IsValueShownAsLabel = true;
+            series4.Label = "#VAL";
+            series4.Legend = "Legend1";
+            series4.MarkerBorderWidth = 0;
+            series4.Name = "불량품";
+            series4.YValuesPerPoint = 2;
+            this.ChartProductionErr.Series.Add(series4);
+            this.ChartProductionErr.Size = new System.Drawing.Size(729, 275);
+            this.ChartProductionErr.TabIndex = 16;
+            this.ChartProductionErr.Text = "chart2";
             // 
             // Home
             // 
@@ -468,6 +498,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1103, 762);
+            this.Controls.Add(this.ChartProductionErr);
             this.Controls.Add(this.chartProductionRate);
             this.Controls.Add(this.chartProductionCapacity);
             this.Controls.Add(this.pnlMngOutput);
@@ -505,6 +536,7 @@
             this.pnlMngOutput.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartProductionCapacity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartProductionRate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartProductionErr)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -541,5 +573,6 @@
         private System.Windows.Forms.Panel pnlMngOutput;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartProductionCapacity;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartProductionRate;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ChartProductionErr;
     }
 }
