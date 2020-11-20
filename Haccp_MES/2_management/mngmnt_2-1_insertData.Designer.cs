@@ -264,7 +264,7 @@
             this.Controls.Add(this.btnCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "mngmnt_2_1_insertData";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mngmnt_2_1_insertData";
             this.Load += new System.EventHandler(this.mngmnt_2_1_insertData_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

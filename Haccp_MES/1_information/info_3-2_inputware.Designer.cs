@@ -49,10 +49,9 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCancel.Location = new System.Drawing.Point(862, 336);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCancel.Location = new System.Drawing.Point(754, 269);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(80, 40);
+            this.btnCancel.Size = new System.Drawing.Size(70, 32);
             this.btnCancel.TabIndex = 0;
             this.btnCancel.Text = "취소";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -62,19 +61,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(73, 46);
+            this.label1.Location = new System.Drawing.Point(64, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 29);
+            this.label1.Size = new System.Drawing.Size(70, 24);
             this.label1.TabIndex = 96;
             this.label1.Text = "창고등록";
             // 
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnSave.Location = new System.Drawing.Point(776, 336);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSave.Location = new System.Drawing.Point(679, 269);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(80, 40);
+            this.btnSave.Size = new System.Drawing.Size(70, 32);
             this.btnSave.TabIndex = 98;
             this.btnSave.Text = "저장";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -84,10 +82,9 @@
             // 
             this.btnAddRow.BackColor = System.Drawing.Color.Violet;
             this.btnAddRow.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnAddRow.Location = new System.Drawing.Point(856, 50);
-            this.btnAddRow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAddRow.Location = new System.Drawing.Point(749, 40);
             this.btnAddRow.Name = "btnAddRow";
-            this.btnAddRow.Size = new System.Drawing.Size(40, 40);
+            this.btnAddRow.Size = new System.Drawing.Size(35, 32);
             this.btnAddRow.TabIndex = 99;
             this.btnAddRow.Text = "+";
             this.btnAddRow.UseVisualStyleBackColor = false;
@@ -97,10 +94,9 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Gold;
             this.btnDelete.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnDelete.Location = new System.Drawing.Point(902, 50);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDelete.Location = new System.Drawing.Point(789, 40);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(40, 40);
+            this.btnDelete.Size = new System.Drawing.Size(35, 32);
             this.btnDelete.TabIndex = 102;
             this.btnDelete.Text = "-";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -143,8 +139,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridInsertWarehouseInput.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridInsertWarehouseInput.EnableHeadersVisualStyles = false;
-            this.gridInsertWarehouseInput.Location = new System.Drawing.Point(39, 102);
-            this.gridInsertWarehouseInput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridInsertWarehouseInput.Location = new System.Drawing.Point(34, 82);
             this.gridInsertWarehouseInput.MultiSelect = false;
             this.gridInsertWarehouseInput.Name = "gridInsertWarehouseInput";
             this.gridInsertWarehouseInput.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -160,7 +155,7 @@
             this.gridInsertWarehouseInput.RowHeadersWidth = 51;
             this.gridInsertWarehouseInput.RowTemplate.Height = 23;
             this.gridInsertWarehouseInput.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridInsertWarehouseInput.Size = new System.Drawing.Size(903, 226);
+            this.gridInsertWarehouseInput.Size = new System.Drawing.Size(790, 181);
             this.gridInsertWarehouseInput.TabIndex = 103;
             // 
             // ware_name
@@ -194,8 +189,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Haccp_MES.Properties.Resources.aperture_3x;
-            this.pictureBox2.Location = new System.Drawing.Point(39, 46);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(34, 37);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -204,9 +198,9 @@
             // 
             // info_3_2_inputware
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 400);
+            this.ClientSize = new System.Drawing.Size(875, 320);
             this.Controls.Add(this.gridInsertWarehouseInput);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAddRow);
@@ -215,9 +209,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "info_3_2_inputware";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "  ";
             this.Load += new System.EventHandler(this.info_3_2_inputware_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridInsertWarehouseInput)).EndInit();

@@ -49,17 +49,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(69, 33);
+            this.label1.Location = new System.Drawing.Point(60, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 29);
+            this.label1.Size = new System.Drawing.Size(85, 24);
             this.label1.TabIndex = 98;
             this.label1.Text = "품목리스트";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Haccp_MES.Properties.Resources.list_3x;
-            this.pictureBox2.Location = new System.Drawing.Point(39, 35);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(34, 28);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -71,10 +70,9 @@
             this.btnClose.BackColor = System.Drawing.Color.Gainsboro;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnClose.Location = new System.Drawing.Point(862, 325);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClose.Location = new System.Drawing.Point(754, 260);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(80, 40);
+            this.btnClose.Size = new System.Drawing.Size(70, 32);
             this.btnClose.TabIndex = 100;
             this.btnClose.Text = "취소";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -119,8 +117,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridSelectInfoMaterial.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridSelectInfoMaterial.EnableHeadersVisualStyles = false;
-            this.gridSelectInfoMaterial.Location = new System.Drawing.Point(39, 91);
-            this.gridSelectInfoMaterial.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridSelectInfoMaterial.Location = new System.Drawing.Point(34, 73);
             this.gridSelectInfoMaterial.MultiSelect = false;
             this.gridSelectInfoMaterial.Name = "gridSelectInfoMaterial";
             this.gridSelectInfoMaterial.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -136,7 +133,7 @@
             this.gridSelectInfoMaterial.RowHeadersWidth = 51;
             this.gridSelectInfoMaterial.RowTemplate.Height = 23;
             this.gridSelectInfoMaterial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSelectInfoMaterial.Size = new System.Drawing.Size(903, 226);
+            this.gridSelectInfoMaterial.Size = new System.Drawing.Size(790, 181);
             this.gridSelectInfoMaterial.TabIndex = 104;
             this.gridSelectInfoMaterial.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.gridSelectInfoMaterial_CellMouseDoubleClick);
             // 
@@ -190,17 +187,16 @@
             // 
             // mngmnt_1_2_materialList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 400);
+            this.ClientSize = new System.Drawing.Size(875, 320);
             this.Controls.Add(this.gridSelectInfoMaterial);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "mngmnt_1_2_materialList";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mngmnt_1_2_materialList";
             this.Load += new System.EventHandler(this.mngmnt_1_2_materialList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -80,7 +80,7 @@ namespace Haccp_MES
                "ON tmp1.day = tmp2.sequential_day " +
                "ORDER BY tmp2.sequential_day ASC ";*/
 
-            string getProductionCapacityQuery = "SELECT DATE_FORMAT(prodrecod_date, '%y-%m-%d') AS 'date', sum(prodrecod_good) AS 'prodrecod_good', sum(prodrecod_err) AS 'prodrecod_err'" + 
+            string getProductionCapacityQuery = "SELECT DATE_FORMAT(prodrecod_date, '%m-%d') AS 'date', sum(prodrecod_good) AS 'prodrecod_good', sum(prodrecod_err) AS 'prodrecod_err'" + 
                                                 "FROM production_prodrecod " +
                                                 "WHERE prodrecod_date BETWEEN DATE_ADD(NOW(), INTERVAL - 1 MONTH) AND NOW() " +
                                                 "GROUP BY date ORDER BY date ASC;";
@@ -146,7 +146,7 @@ namespace Haccp_MES
 
             #region LineChart: 불량품
             conn.Open();
-            string getProductionErrQuery = "SELECT DATE_FORMAT(prodrecod_date, '%y-%m-%d') AS 'date', prodrecod_err " +
+            string getProductionErrQuery = "SELECT DATE_FORMAT(prodrecod_date, '%m-%d') AS 'date', SUM(prodrecod_err)/SUM(prodrecod_err + prodrecod_good) * 100 AS 'err_percent' " +
                                                 "FROM production_prodrecod " +
                                                 "WHERE prodrecod_date BETWEEN DATE_ADD(NOW(), INTERVAL - 2 WEEK) AND NOW() " +
                                                 "GROUP BY date ORDER BY date ASC;";
@@ -158,8 +158,8 @@ namespace Haccp_MES
             ChartProductionErr.DataSource = Edata;
 
             ChartProductionErr.Series[0].XValueMember = "date";
-            ChartProductionErr.Series[0].YValueMembers = "prodrecod_err";
-            ChartProductionErr.Series[0].LegendText = "불량품";
+            ChartProductionErr.Series[0].YValueMembers = "err_percent";
+            ChartProductionErr.Series[0].LegendText = "불량률(%)";
             ChartProductionErr.ChartAreas["ChartArea1"].AxisX.LabelStyle.Interval = 1;
             ChartProductionErr.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = false;
             ChartProductionErr.ChartAreas["ChartArea1"].AxisY.MajorGrid.Enabled = false;
