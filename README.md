@@ -43,9 +43,9 @@ Login
 ---
     * OAuth 2.0 도입 예정
     
-<p align="center">
-   <img src="https://user-images.githubusercontent.com/24702528/104092309-7bdcc400-52c6-11eb-944c-6afe9fb609e9.png" width="600">
-</p>
+    <p align="center">
+       <img src="https://user-images.githubusercontent.com/24702528/104092309-7bdcc400-52c6-11eb-944c-6afe9fb609e9.png" width="600">
+    </p>
 
 
 Home
@@ -54,7 +54,7 @@ Home
         1) 한달 간의 양품,불량품 Column Chart   
         2) 날짜별 불량률 Line Chart   
         3) 한달 총 합산 불량률 Doughnut Chart
-<p align="center">
-   <img src="https://user-images.githubusercontent.com/24702528/104092310-7d0df100-52c6-11eb-8025-7f0eac48ab2b.png" width="600">
-</p>
+    <p align="center">
+       <img src="https://user-images.githubusercontent.com/24702528/104092310-7d0df100-52c6-11eb-8025-7f0eac48ab2b.png" width="600">
+    </p>
 
