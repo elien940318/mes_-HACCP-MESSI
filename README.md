@@ -58,6 +58,13 @@ Home
 </p>
 
 
+
+Information
+---
+    * 거래처, 품목, 창고 및 BOM 관련 기준정보
+<p align="center">
+</p>
+
 Management
 ---
     * 품목 입출고 및 재고 현황 관리 
@@ -66,4 +73,15 @@ Management
     <img src="https://user-images.githubusercontent.com/24702528/104092640-931cb100-52c8-11eb-8772-885c626b3df8.png" width="400">
     <img src="https://user-images.githubusercontent.com/24702528/104092708-11795300-52c9-11eb-8557-0a9db75e3f1c.png" width="400">
     <img src="https://user-images.githubusercontent.com/24702528/104092709-12aa8000-52c9-11eb-8bdb-52d268127f18.png" width="400">
+</p>
+
+Production
+---
+    * 작업지시 및 생산실적 관리 
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/24702528/104092834-e5aa9d00-52c9-11eb-919c-5682fdcff217.png" width="300">
+    <img src="https://user-images.githubusercontent.com/24702528/104092837-e8a58d80-52c9-11eb-97d5-e70fe2058d11.png" width="300">
+    <img src="https://user-images.githubusercontent.com/24702528/104092838-ea6f5100-52c9-11eb-9a5a-7ab65db2c294.png" width="300">
+    <img src="https://user-images.githubusercontent.com/24702528/104092841-ed6a4180-52c9-11eb-9b14-fceb1042e8d8.png" width="400">
+    <img src="https://user-images.githubusercontent.com/24702528/104092844-f0653200-52c9-11eb-9dde-583153057048.png" width="400">
 </p>
