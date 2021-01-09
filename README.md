@@ -21,9 +21,10 @@ Collaborator
     
 Envoirment
 ===
-    * Server: Linux (used Raspberry-Pi 4)
+    * Server: Debian Linux (Raspbian, Raspberry-Pi 4)
     * DBMS: Maria DB
     * Framework: .Net (Winform)
+    * Language: C#
 
 <br><br><br><br>
 
