@@ -49,8 +49,8 @@ Login
 
 Home
 ---
-    * 최근 데이터 기준하여 한달간의 생산량을 그래프로 출력
-        1) 한달 간의 양품,불량품 Column Chart   
+    * 최근 데이터 기준으로 생산량을 그래프로 출력
+        1) 2주 간의 양품,불량품 Column Chart   
         2) 날짜별 불량률 Line Chart   
         3) 한달 총 합산 불량률 Doughnut Chart
 <p align="center">
