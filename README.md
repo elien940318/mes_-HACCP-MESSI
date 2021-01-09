@@ -1,6 +1,6 @@
 # HACCP_MESSI
 <div>
-  <img width="100" src="https://user-images.githubusercontent.com/24702528/104091460-dd9a2f80-52c0-11eb-9670-ddb1ec496ba8.png">  
+  <img width="1000" src="https://user-images.githubusercontent.com/24702528/104091460-dd9a2f80-52c0-11eb-9670-ddb1ec496ba8.png">  
 </div>
 
 경상대학교 스마트전문인력양성 프로젝트  
