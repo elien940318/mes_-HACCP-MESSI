@@ -60,9 +60,10 @@ Home
 
 Management
 ---
-    * 품목입고관리
-        원자재 입고내역을 관리하는 page
+    * 품목 입출고 및 재고 현황 관리 
 <p align="center">
-   <img src="https://user-images.githubusercontent.com/24702528/104092615-636da900-52c8-11eb-93e0-edc5cf6b5678.png" width="200">
-   <img src="https://user-images.githubusercontent.com/24702528/104092640-931cb100-52c8-11eb-8772-885c626b3df8.png" width="200">
+    <img src="https://user-images.githubusercontent.com/24702528/104092615-636da900-52c8-11eb-93e0-edc5cf6b5678.png" width="400">
+    <img src="https://user-images.githubusercontent.com/24702528/104092640-931cb100-52c8-11eb-8772-885c626b3df8.png" width="400">
+    <img src="https://user-images.githubusercontent.com/24702528/104092708-11795300-52c9-11eb-8557-0a9db75e3f1c.png" width="400">
+    <img src="https://user-images.githubusercontent.com/24702528/104092709-12aa8000-52c9-11eb-8bdb-52d268127f18.png" width="400">
 </p>
