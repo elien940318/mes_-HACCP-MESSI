@@ -17,6 +17,16 @@ Logo
 </p>
 
 
+Collaborator
+===
+    강창기
+    김동욱
+    김문혁
+    박근도
+    조영현
+    
+
+
 Envoirment
 ===
     * Server: Linux (used Raspberry-Pi 4)
@@ -41,11 +51,3 @@ Main View
 ---
 
 
-Collaborator
-===
-    강창기
-    김동욱
-    김문혁
-    박근도
-    조영현
-    
