@@ -2,13 +2,15 @@
 
 Project description
 ===
-   경상대학교 스마트전문인력양성 프로젝트  
-   최우수상 수상
-   MES 시스템 구축  
+    수행기관: 경상대학교 스마트공장지원센터
+    
+    프로젝트 목표: 
+      쌀국수 제품을 생산하는 가상의 제조공정을 대상으로 하여
+      생산성 향상을 도모하는 간이 MES 시스템 구축
 
-   지도교수: 산업시스템공학과 도남철 교수  
-   멘토: HACCP&SmartFactory 전보근 개발팀장
-
+    지도교수: 경상대학교 산업시스템공학과 도남철 교수
+    멘토: HACCP&SmartFactory 전보근 개발팀장
+   
 Collaborator
 ===
     강창기
@@ -16,6 +18,7 @@ Collaborator
     김문혁
     박근도
     조영현
+    
     
 
 Logo
@@ -34,17 +37,20 @@ Envoirment
 
 <h1 align="center">Design</h1>
 
-Login View
+Login
 ---
     * 회원가입 버튼 기능 미구현
     * OAuth 2.0 도입 예정
     
 <p align="center">
-   <img src="https://user-images.githubusercontent.com/24702528/104091630-e808f900-52c1-11eb-8ae7-0ff19154c279.png" width="400">
+   <img src="https://user-images.githubusercontent.com/24702528/104092309-7bdcc400-52c6-11eb-944c-6afe9fb609e9.png" width="400">
 </p>
 
 
-Main View
+Home
 ---
-
+    1) 한달 간의 양품,불량품 Column Chart   2) 날짜별 불량률 Line Chart   3) 한달 총 합산 불량률 Doughnut Chart
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/24702528/104092310-7d0df100-52c6-11eb-8025-7f0eac48ab2b.png" width="400">
+</p>
 
