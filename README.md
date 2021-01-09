@@ -87,6 +87,8 @@ Production
     <img src="https://user-images.githubusercontent.com/24702528/104092834-e5aa9d00-52c9-11eb-919c-5682fdcff217.png" width="300">
     <img src="https://user-images.githubusercontent.com/24702528/104092837-e8a58d80-52c9-11eb-97d5-e70fe2058d11.png" width="300">
     <img src="https://user-images.githubusercontent.com/24702528/104092838-ea6f5100-52c9-11eb-9a5a-7ab65db2c294.png" width="300">
+</p>
+<p align="center">
     <img src="https://user-images.githubusercontent.com/24702528/104092841-ed6a4180-52c9-11eb-9b14-fceb1042e8d8.png" width="400">
     <img src="https://user-images.githubusercontent.com/24702528/104092844-f0653200-52c9-11eb-9dde-583153057048.png" width="400">
 </p>
