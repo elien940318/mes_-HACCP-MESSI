@@ -28,15 +28,15 @@ Envoirment
 <br><br><br><br>
 
 
-Logo
-===
-<p align="center">
-   <img width="500" src="https://user-images.githubusercontent.com/24702528/104091460-dd9a2f80-52c0-11eb-9670-ddb1ec496ba8.png">  
-</p>
-
 <!--<h1 align="center">Design</h1>-->
 Design
 ===
+
+Logo
+---
+<p align="center">
+   <img width="500" src="https://user-images.githubusercontent.com/24702528/104091460-dd9a2f80-52c0-11eb-9670-ddb1ec496ba8.png">  
+</p>
 
 Login
 ---
