@@ -19,14 +19,6 @@ Collaborator
     박근도
     조영현
     
-    
-
-Logo
-===
-<p align="center">
-   <img width="500" src="https://user-images.githubusercontent.com/24702528/104091460-dd9a2f80-52c0-11eb-9670-ddb1ec496ba8.png">  
-</p>
-
 Envoirment
 ===
     * Server: Linux (used Raspberry-Pi 4)
@@ -34,6 +26,13 @@ Envoirment
     * Framework: .Net (Winform)
 
 <br><br><br><br>
+
+
+Logo
+===
+<p align="center">
+   <img width="500" src="https://user-images.githubusercontent.com/24702528/104091460-dd9a2f80-52c0-11eb-9670-ddb1ec496ba8.png">  
+</p>
 
 <!--<h1 align="center">Design</h1>-->
 Design
@@ -43,9 +42,9 @@ Login
 ---
     * OAuth 2.0 도입 예정
     
-    <p align="center">
-       <img src="https://user-images.githubusercontent.com/24702528/104092309-7bdcc400-52c6-11eb-944c-6afe9fb609e9.png" width="600">
-    </p>
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/24702528/104092309-7bdcc400-52c6-11eb-944c-6afe9fb609e9.png" width="600">
+</p>
 
 
 Home
@@ -54,7 +53,16 @@ Home
         1) 한달 간의 양품,불량품 Column Chart   
         2) 날짜별 불량률 Line Chart   
         3) 한달 총 합산 불량률 Doughnut Chart
-    <p align="center">
-       <img src="https://user-images.githubusercontent.com/24702528/104092310-7d0df100-52c6-11eb-8025-7f0eac48ab2b.png" width="600">
-    </p>
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/24702528/104092310-7d0df100-52c6-11eb-8025-7f0eac48ab2b.png" width="600">
+</p>
 
+
+Management
+---
+    * 품목입고관리
+        원자재 입고내역을 관리하는 page
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/24702528/104092615-636da900-52c8-11eb-93e0-edc5cf6b5678.png" width="200">
+   <img src="https://user-images.githubusercontent.com/24702528/104092640-931cb100-52c8-11eb-8772-885c626b3df8.png" width="200">
+</p>
