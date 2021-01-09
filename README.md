@@ -40,8 +40,8 @@ Design
 
 Login
 ---
+    * 3초간의 Progress Bar 화면 출력 후 Login View 출력
     * OAuth 2.0 도입 예정
-    
 <p align="center">
    <img src="https://user-images.githubusercontent.com/24702528/104092309-7bdcc400-52c6-11eb-944c-6afe9fb609e9.png" width="600">
 </p>
@@ -63,6 +63,10 @@ Information
 ---
     * 거래처, 품목, 창고 및 BOM 관련 기준정보
 <p align="center">
+    <img src="https://user-images.githubusercontent.com/24702528/104092934-9022c000-52ca-11eb-82b3-cab81c953d6e.png" width="400">
+    <img src="https://user-images.githubusercontent.com/24702528/104092936-91ec8380-52ca-11eb-9fd4-7d870bfb009a.png" width="400">
+    <img src="https://user-images.githubusercontent.com/24702528/104092938-931db080-52ca-11eb-8648-a493dcbe6f13.png" width="400">
+    <img src="https://user-images.githubusercontent.com/24702528/104092940-95800a80-52ca-11eb-9849-58636d423fe0.png" width="400">
 </p>
 
 Management
