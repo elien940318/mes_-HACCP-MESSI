@@ -42,7 +42,7 @@ Logo
 Login
 ---
     * 3초간의 Progress Bar 화면 출력 후 Login View 출력
-    * OAuth 2.0 도입 예정
+    * Google OAuth 2.0 도입 예정
 <p align="center">
    <img src="https://user-images.githubusercontent.com/24702528/104092309-7bdcc400-52c6-11eb-944c-6afe9fb609e9.png" width="600">
 </p>
