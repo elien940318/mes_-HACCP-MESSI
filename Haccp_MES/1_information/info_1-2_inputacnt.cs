@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Haccp_MES._1_information
 {
     public partial class info_1_2_inputacnt : Form
